@@ -1,0 +1,26 @@
+.main {
+  max-width: 1170px;
+  border: 1px solid #ccc;
+  margin: auto;
+  text-align: center;
+}
+
+.main h1 {
+  color: red;
+}
+
+
+.banners{
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+
+}
+
+.banneritem{
+    flex-basis: 23%;
+    margin: 1%;
+}
+.banneritem img{
+    width: 100%;    
+}
