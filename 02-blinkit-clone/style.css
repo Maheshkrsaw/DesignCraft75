@@ -15,6 +15,9 @@ body {
 
 header {
   display: flex;
+  border-top: 1px solid #ccc;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
 }
 
 .headerleft {
@@ -23,7 +26,7 @@ header {
 }
 
 .logo {
-  padding: 22px;
+  padding: 24px 30px;
   border-right: 1px solid #ccc;
 }
 
@@ -37,5 +40,32 @@ header {
 }
 
 .headeraddress p {
+  font-size: 15px;
+}
+
+.searchbox {
+  flex-grow: 1;
+  display: flex;
+  background-color: #f8f8f8;
+  border: 1px solid #f0f0f0;
+  border-radius: 15px;
+}
+
+.searchbox button {
+  padding: 15px;
+  background-color: transparent;
+  border: none;
+}
+.searchbox input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+}
+
+.searchbox input:focus {
+  outline: none;
+}
+
+button i {
   font-size: 15px;
 }
