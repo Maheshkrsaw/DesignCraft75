@@ -87,3 +87,7 @@ Each day includes:
 - 🎨 AI-Based Image Suggestions  
 - 🗣️ Chatbot UI with HuggingFace Models  
 - 📊 Content Summarizer / Recommender  
+
+
+
+rfgfdg
