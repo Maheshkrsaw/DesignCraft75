@@ -28,4 +28,14 @@
   .searchbox button{
     padding: 10px;
   }
+
+  .headerbtn{
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    margin-right: 0px;
+    justify-content: center;
+  }
+
+
 }
