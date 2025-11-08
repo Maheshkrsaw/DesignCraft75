@@ -92,7 +92,20 @@ button i {
 }
 
 .headerbtn button:last-child{
+  display: flex;
+  align-items: center;
   background-color: #34AF43 ;
   border-radius: 10px;
   font-weight: bold;
+}
+
+
+.banner{
+  max-width: 1280px;
+  margin: auto;
+}
+
+.banner img{
+    width: 100%;
+
 }
