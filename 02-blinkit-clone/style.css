@@ -109,3 +109,19 @@ button i {
     width: 100%;
 
 }
+
+.orderBanner{
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+}
+
+.orderBannerItems{
+  flex-basis: 27%;
+  margin: 1%;
+}
+
+.orderBannerItems img{
+  width: 100%;
+  
+}

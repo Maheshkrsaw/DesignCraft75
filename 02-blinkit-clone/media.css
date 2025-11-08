@@ -31,7 +31,8 @@
 
   .headerbtn{
     position: fixed;
-    bottom: 10px;
+    background-color:white ;
+    bottom: 1px;
     width: 100%;
     margin-right: 0px;
     justify-content: center;
@@ -40,5 +41,10 @@
   .banner img{
     display: none;
   }
+
+  .orderBanner{
+ flex-direction: column;
+ padding: 5px;
+}
 
 }
