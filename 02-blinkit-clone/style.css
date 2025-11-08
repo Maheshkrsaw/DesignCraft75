@@ -125,3 +125,21 @@ button i {
   width: 100%;
   
 }
+
+.categoriesSection{
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories{
+  flex-basis: 10%;
+  
+  /* margin: 1%; */
+}
+
+.categories img{
+  width: 100%;
+
+}

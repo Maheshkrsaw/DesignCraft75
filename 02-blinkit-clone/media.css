@@ -25,26 +25,31 @@
     font-size: 13px;
   }
 
-  .searchbox button{
+  .searchbox button {
     padding: 10px;
   }
 
-  .headerbtn{
+  .headerbtn {
     position: fixed;
-    background-color:white ;
+    background-color: white;
     bottom: 1px;
     width: 100%;
     margin-right: 0px;
     justify-content: center;
   }
 
-  .banner img{
+  .banner img {
     display: none;
   }
 
-  .orderBanner{
- flex-direction: column;
- padding: 5px;
-}
+  .orderBanner {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .categories{
+    flex-basis: 25%;
+  }
+
 
 }
