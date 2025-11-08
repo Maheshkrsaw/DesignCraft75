@@ -28,7 +28,7 @@ header {
 }
 
 .headeraddress {
-  padding: 20px ;
+  padding: 20px;
 }
 
 .headeraddress h3 {
@@ -36,6 +36,6 @@ header {
   font-size: 20px;
 }
 
-.headeraddress p{
+.headeraddress p {
   font-size: 15px;
 }
