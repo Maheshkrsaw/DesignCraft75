@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Basic CSS Boilerplate */
 * {
@@ -8,9 +8,9 @@
   box-sizing: border-box;
 }
 
-html, body {
- font-family: "Poppins", sans-serif;
-  /* font-family: "Poppins", sans-serif; */
+html,
+body {
+  font-family: "Poppins", sans-serif;
   background-color: #fff;
   height: 100%;
   width: 100%;
@@ -18,85 +18,135 @@ html, body {
   background: var(--bg-color);
 }
 
-:root{
-    --text-color:#342b0c;
-    --bg-color:#fefbeb;
-    --inner-bg-color:#ede8d5;
-    --btn-color:#f3c30e;
+:root {
+  --text-color: #342b0c;
+  --bg-color: #fefbeb;
+  --inner-bg-color: #ede8d5;
+  --btn-color: #f3c30e;
 }
 
 /* basic styling */
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-img{
-    max-width: 100%;
-    object-fit: cover;
+img {
+  max-width: 100%;
+  object-fit: cover;
 }
 
-.flex{
-    display: flex;
-    align-items: center;
+.flex {
+  display: flex;
+  align-items: center;
 }
 
-.container{
-    max-width: 85%;
-    margin: auto;
+.container {
+  max-width: 85%;
+  margin: auto;
 }
-
 
 /* navbar styling here */
 
-.navbar{
-    justify-content: space-between;
-    height: 17vh;
+.navbar {
+  justify-content: space-between;
+  height: 17vh;
 }
 
-.navlist{
-    gap: 3rem;
+.navlist {
+  gap: 3rem;
 }
 
-.link{
-    color: var(--text-color);
-    font-size: .95rem;
+.link {
+  color: var(--text-color);
+  font-size: 0.95rem;
 }
 
-.logo{
-    font-size: 1.3rem;
-    color: var(--text-color);
-    text-transform: uppercase;
-    font-weight: 600;
+.logo {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-.fa-ice-cream{
-    font-size: 1.8rem;
+.fa-ice-cream {
+  font-size: 1.8rem;
 }
 
-.icons{
-    background: var(--btn-color);
-    color: var(--text-color);
-    font-size: 1.2rem;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    border: .1rem solid var(--btn-color);
-    transition: .5s ease-in-out ;
+.icons {
+  background: var(--btn-color);
+  color: var(--text-color);
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  border: 0.1rem solid var(--btn-color);
+  transition: 0.5s ease-in-out;
 }
 
-.nav-icons{
-    justify-content: center;
-    gap: 1rem;
+.nav-icons {
+  justify-content: center;
+  gap: 1rem;
 }
 
+.icons:hover {
+  background: transparent;
+}
 
-.icons:hover{
-    background: transparent;
+.hero {
+  min-height: 120vh;
+  background-image: url(imgs/almonds.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 57%;
+  padding-top: 4rem;
+  position: relative;
+}
 
+.inner-hero {
+  background: var(--inner-bg-color);
+  width: 100%;
+  border-radius: 3rem;
+  justify-content: center;
+  padding: 3rem 5rem;
+  position: relative;
+  isolation: isolate;
+}
+
+.hero h1 {
+  font-size: 13vw;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: var(--text-color);
+  font-family: "Bebas Neue", serif;
+}
+
+.hero-center-image{
+    position: absolute;
+    left: 44%;
+    transform: translateX(-50%);
+    top: 29%;
+    rotate: 30deg;
+    width: 25vw;
+}
+
+.hero-left-image,
+.hero-right-image{
+    position: absolute;
+    width: 12vw;
+    top: 0;
+}
+
+.hero-right-image{
+    right: 0;
+    z-index: -1;
+}
+
+.hero-left-image{
+    left: 0;
 }
