@@ -48,3 +48,55 @@ img{
     max-width: 85%;
     margin: auto;
 }
+
+
+/* navbar styling here */
+
+.navbar{
+    justify-content: space-between;
+    height: 17vh;
+}
+
+.navlist{
+    gap: 3rem;
+}
+
+.link{
+    color: var(--text-color);
+    font-size: .95rem;
+}
+
+.logo{
+    font-size: 1.3rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.fa-ice-cream{
+    font-size: 1.8rem;
+}
+
+.icons{
+    background: var(--btn-color);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    border: .1rem solid var(--btn-color);
+    transition: .5s ease-in-out ;
+}
+
+.nav-icons{
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.icons:hover{
+    background: transparent;
+
+}
