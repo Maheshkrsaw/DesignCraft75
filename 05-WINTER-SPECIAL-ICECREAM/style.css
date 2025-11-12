@@ -49,6 +49,10 @@ img {
   margin: auto;
 }
 
+.sections{
+    padding-block: 3rem;
+}
+
 /* navbar styling here */
 
 .navbar {
@@ -149,4 +153,44 @@ img {
 
 .hero-left-image{
     left: 0;
+}
+
+h2{
+    font-size: 5vw;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+  font-family: "Bebas Neue", serif;
+}
+
+.card-container {
+    gap: 4rem;
+    height: 90vh;
+    align-items: flex-end;
+    /* background-color: red; */
+}
+
+.card{
+    flex: 1;
+    background: var(--inner-bg-color);
+    padding: 12rem 2.5rem 2.5rem;
+    border-radius: 1.5rem;
+    position: relative;
+}
+
+.card-image{
+    width: 20rem;
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card .content{
+    justify-content: space-between;
+}
+
+span{
+    font-weight: bold;
+    color: var(--text-color);
 }
