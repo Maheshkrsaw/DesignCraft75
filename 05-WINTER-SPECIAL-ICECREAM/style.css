@@ -49,8 +49,8 @@ img {
   margin: auto;
 }
 
-.sections{
-    padding-block: 3rem;
+.sections {
+  padding-block: 3rem;
 }
 
 /* navbar styling here */
@@ -130,68 +130,68 @@ img {
   font-family: "Bebas Neue", serif;
 }
 
-.hero-center-image{
-    position: absolute;
-    left: 44%;
-    transform: translateX(-50%);
-    top: 29%;
-    rotate: 30deg;
-    width: 25vw;
+.hero-center-image {
+  position: absolute;
+  left: 44%;
+  transform: translateX(-50%);
+  top: 29%;
+  rotate: 30deg;
+  width: 25vw;
 }
 
 .hero-left-image,
-.hero-right-image{
-    position: absolute;
-    width: 12vw;
-    top: 0;
+.hero-right-image {
+  position: absolute;
+  width: 12vw;
+  top: 0;
 }
 
-.hero-right-image{
-    right: 0;
-    z-index: -1;
+.hero-right-image {
+  right: 0;
+  z-index: -1;
 }
 
-.hero-left-image{
-    left: 0;
+.hero-left-image {
+  left: 0;
 }
 
-h2{
-    font-size: 5vw;
-    letter-spacing: .2rem;
-    text-transform: uppercase;
-    color: var(--text-color);
+h2 {
+  font-size: 5vw;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--text-color);
   font-family: "Bebas Neue", serif;
+  /* padding: 2rem 0 ; */
 }
 
 .card-container {
-    gap: 4rem;
-    height: 90vh;
-    align-items: flex-end;
-    /* background-color: red; */
+  gap: 4rem;
+  height: 85vh;
+  align-items: flex-end;
+  /* background-color: red; */
 }
 
-.card{
-    flex: 1;
-    background: var(--inner-bg-color);
-    padding: 12rem 2.5rem 2.5rem;
-    border-radius: 1.5rem;
-    position: relative;
+.card {
+  flex: 1;
+  background: var(--inner-bg-color);
+  padding: 12rem 2.5rem 2.5rem;
+  border-radius: 1.5rem;
+  position: relative;
 }
 
-.card-image{
-    width: 20rem;
-    position: absolute;
-    bottom: 30%;
-    left: 50%;
-    transform: translateX(-50%);
+.card-image {
+  width: 20rem;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.card .content{
-    justify-content: space-between;
+.card .content {
+  justify-content: space-between;
 }
 
-span{
-    font-weight: bold;
-    color: var(--text-color);
+span {
+  font-weight: bold;
+  color: var(--text-color);
 }
-
