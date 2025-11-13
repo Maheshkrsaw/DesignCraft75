@@ -288,3 +288,10 @@ span {
 .btn-2{
   margin-top: 2rem;
 }
+
+footer{
+  background: var(--text-color);
+  text-align: center;
+  padding-block: 3rem;
+  margin-top: 3rem;
+}
