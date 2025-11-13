@@ -242,3 +242,26 @@ span {
   bottom: 0;
   left: -2%;
 }
+
+.healthy-section{
+  background: var(--inner-bg-color);
+  padding-top: 5rem;  
+}
+
+.milky-image img{
+  display: block;
+}
+
+.healthy-section .content img{
+  width: 15rem;
+  display: block;
+  float: right;
+}
+
+.healthy-section .container{
+  align-items: flex-end;
+}
+
+.dark-para{
+  margin:0  0 2rem 0;
+}
