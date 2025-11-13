@@ -3,7 +3,7 @@ var tl = gsap.timeline({
         trigger:"#s1",
         start:"0% 80%",
         end:"50% 50%",
-        markers:true,
+        // markers:true,
         scrub:true,
     }
 })
@@ -13,7 +13,7 @@ var tl1 = gsap.timeline({
         trigger:"#s2",
         start:"0% 80%",
         end:"50% 50%",
-        markers:true,
+        // markers:true,
         scrub:true,
     }
 })
@@ -22,7 +22,7 @@ var tl2 = gsap.timeline({
         trigger:"#s3",
         start:"0% 80%",
         end:"50% 50%",
-        markers:true,
+        // markers:true,
         scrub:true,
     }
 })
