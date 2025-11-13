@@ -213,6 +213,7 @@ span {
   font-size: 1.1rem;
   border: .1rem solid var(--btn-color);
   border-radius: 100vw;
+ 
 }
 
 .production h2{
@@ -264,4 +265,26 @@ span {
 
 .dark-para{
   margin:0  0 2rem 0;
+  
+}
+
+.commitment{
+  text-align: center;
+  background-image: url(imgs/leaves.png);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  /* background-position: center; */
+}
+
+.commitment .container img{
+  width: 29rem;
+}
+
+.commitment .container p{
+  max-width: 650px;
+  margin: auto;
+}
+
+.btn-2{
+  margin-top: 2rem;
 }
