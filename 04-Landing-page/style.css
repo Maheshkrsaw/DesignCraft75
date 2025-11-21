@@ -228,4 +228,25 @@ padding: 1rem;
     flex: 1;
     justify-content: flex-end;
   } 
+
+  .header-container{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    text-align: left;
+  }
+
+  .header-image{
+    grid-area: 1/2/2/3;
+
+  }
+}
+
+@media(width>1024px){
+  .header-container form{
+    flex-direction: row;
+  }
+
+  .header-container button{
+    width: fit-content;
+  }
 }
