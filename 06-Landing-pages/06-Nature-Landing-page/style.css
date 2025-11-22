@@ -211,3 +211,57 @@ nav{
   cursor: pointer;
 }
 
+
+  @media (width > 768px) {
+  nav {
+    padding: 2rem 1rem;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-bar {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav-logo span {
+    display: flex;
+  }
+
+  .nav-menu-btn {
+    display: none;
+  }
+
+  .nav-links {
+    padding: 0;
+    width: unset;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  .container-grid {
+    padding-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .container-image {
+    grid-area: 1/2/2/3;
+  }
+
+  .container-content {
+    text-align: left;
+  }
+
+  .container-content :is(h2, p) {
+    margin-inline: unset;
+  }
+
+  .socials > div {
+    justify-content: flex-start;
+  }
+}

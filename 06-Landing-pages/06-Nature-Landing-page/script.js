@@ -17,3 +17,25 @@ navLinks.addEventListener("click", (e) => {
   menuBtnIcon.setAttribute("class", "ri-menu-3-line");
 });
 
+const scrollRevealOption = {
+  distance: "50px",
+  origin: "bottom",
+  duration: 1000,
+};
+
+// container
+ScrollReveal().reveal(".container-content h1", {
+  ...scrollRevealOption,
+});
+ScrollReveal().reveal(".container-content h2", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+ScrollReveal().reveal(".container-content p", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+ScrollReveal().reveal(".socials", {
+  ...scrollRevealOption,
+  delay: 1500,
+});
