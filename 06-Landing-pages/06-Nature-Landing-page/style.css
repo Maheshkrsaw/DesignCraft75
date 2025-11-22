@@ -108,3 +108,106 @@ nav{
 .nav-links a:hover{
     color: var(--primary-color);
 }
+
+
+.container-grid{
+    position: relative;
+    isolation: isolate;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    padding-top: 8rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.bg-1,.bg-2,.bg-3{
+    max-width:150px ;
+    position: absolute;
+    z-index: 1;
+}
+
+.bg-1{
+    top: 0;
+    right: 0;
+}
+
+.bg-2{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bg-3{
+    bottom: 0;
+    left: 25%;
+}
+
+.container-image>div{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    aspect-ratio: 1;
+    background-image:url(assests/header.jpg) ;
+    background-position: center;
+    background-size: cover;
+    -webkit-mask: url(assests/header-bg.png);
+    -webkit-mask-size: cover;
+    -webkit-mask-position: center center;
+}
+
+.container-content{
+    text-align: center;
+}
+
+.container-content h1{
+    font-size: 4rem;
+    line-height: 5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.container-content h2{
+    margin-bottom: 1rem;
+    max-width: 450px;
+    font-size: 2.5rem;    
+    margin-inline: auto;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--white);
+}
+
+.container-content p {
+  margin-inline: auto;
+  margin-bottom: 4rem;
+  max-width: 400px;
+  color: var(--white);
+}
+
+.socials > div {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socials a {
+  padding: 2px 7px;
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  background-color: var(--white);
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+
+.socials span {
+  font-size: 1.1rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
