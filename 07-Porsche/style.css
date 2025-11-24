@@ -208,7 +208,7 @@ nav {
 }
 
 .feature-2 {
-    color: var(--text-dark);
+    color: var(--white);
     transform: translate(calc(-50% + 300px), calc(-50% - 200px));
 }
 
@@ -218,7 +218,7 @@ nav {
 }
 
 .feature-4 {
-    color: var(--text-dark);
+    color: var(--white);
     transform: translate(calc(-50% + 300px), calc(-50% + 200px));
 }
 
