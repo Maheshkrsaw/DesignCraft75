@@ -44,7 +44,7 @@ body::after {
     animation: body-bg 1s ease-in-out forwards;
 }
 
-/* @keyframes body-bg {
+@keyframes body-bg {
     0% {
         width: 0vw;
     }
@@ -52,7 +52,7 @@ body::after {
     100% {
         width: 50vw;
     }
-} */
+}
 
 
 body::before {
@@ -186,7 +186,7 @@ nav {
 }
 
 
-.container h5{
+.container h5 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -194,30 +194,30 @@ nav {
     font-weight: 500;
 }
 
-.container h5::after{
+.container h5::after {
     position: absolute;
     content: "";
     height: 1px;
     width: 100px;
-    top: 50%; 
+    top: 50%;
 }
 
-.feature-1{
+.feature-1 {
     color: var(--text-dark);
     transform: translate(calc(-50% - 300px), calc(-50% - 200px));
 }
 
-.feature-2{
+.feature-2 {
     color: var(--text-dark);
     transform: translate(calc(-50% + 300px), calc(-50% - 200px));
 }
 
-.feature-3{
+.feature-3 {
     color: var(--text-dark);
     transform: translate(calc(-50% - 300px), calc(-50% + 200px));
 }
 
-.feature-4{
+.feature-4 {
     color: var(--text-dark);
     transform: translate(calc(-50% + 300px), calc(-50% + 200px));
 }
@@ -235,4 +235,65 @@ nav {
     left: 0;
     transform: translate(calc(-100% - 5px), -50%);
     background-color: var(--white);
+}
+
+
+.footer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding-inline: 1rem;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer_links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    gap: 2rem;
+}
+
+.footer p{
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.footer_links li{
+    opacity: 0;
+    animation: fade-in .3s ease-in-out forwards;
+}
+
+.footer_links li:nth-child(1){
+    animation-delay: 6s;
+}
+
+.footer_links li:nth-child(2){
+    animation-delay: 6.5s;
+}
+
+.footer_links li:nth-child(3){
+    animation-delay: 7s;
+}
+
+@keyframes fade-in {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 100%;
+        }
+}
+
+.footer_links a {
+    color: #fff;
+}
+
+.footer_links a:hover{
+    color: var(--primary-color);
 }
