@@ -23,15 +23,15 @@ const scrollRevealOption = {
   duration: 2000,
 };
 
-ScrollReveal().reveal(".header__container h1", {
+ScrollReveal().reveal(".header_container h1", {
   ...scrollRevealOption,
   delay: 1000,
 });
-ScrollReveal().reveal(".header__container p", {
+ScrollReveal().reveal(".header_container p", {
   ...scrollRevealOption,
   delay: 2000,
 });
-ScrollReveal().reveal(".header__container .header__btn", {
+ScrollReveal().reveal(".header_container .header__btn", {
   ...scrollRevealOption,
   delay: 3000,
 });
