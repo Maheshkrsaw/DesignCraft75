@@ -114,6 +114,87 @@ nav{
     white-space: nowrap;
 }
 
+.header_container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.header_container h1 {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 0 1rem;
+  flex-wrap: wrap;
+  font-weight: 800;
+  color: var(--white);
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.header_container h1 span:nth-child(1) {
+  font-size: 6rem;
+  line-height: 6rem;
+}
+
+.header_container h1 span:nth-child(2) {
+  font-size: 2rem;
+}
+
+.header_container p {
+  margin-bottom: 5rem;
+  max-width: calc((var(--max-width)) / 2);
+  line-height: 1.75rem;
+  color: var(--white);
+}
+
+button {
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 0.25rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socials a {
+  display: inline-flex;
+  padding: 9px 10px;
+  font-display: 1.2rem;
+  color: var(--white);
+  border: 1px solid var(--primary-color);
+  border-radius: 100%;
+}
+
+.socials a:hover {
+  color: var(--primary-color);
+  background-color: var(--white);
+  border-color: var(--white);
+}
+
+@media (width > 540px) {
+  .header__container h1 span:nth-child(1) {
+    font-size: 8rem;
+    line-height: 7.5rem;
+  }
+}
+
+
+
 
 @media (width > 768px) {
   nav {
