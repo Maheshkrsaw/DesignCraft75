@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --primary-color: #f1eee9;
+  --secondary-color: #f54725;
+  --tertiary-color: #f9d678;
+  --text-dark: #13313c;
+  --text-light: #475569;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-font: "Rubik", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section_container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+img{
+    display: flex;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    transition: .3s;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
+}
+
+nav{
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    z-index: 9;
+}
+
+.nav_header{
+    padding: 1rem;
+    width: 100%;
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--text-dark);
+}
+
+.nav_logo a{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.nav_logo a span{
+    padding: 3px 7px;
+    margin-inline: 5px;
+    font-size: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+}
+
+.nav_menu_btn{
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.nav_links{
+    position: absolute;
+    top: 64px;
+    left: 0;
+    padding: 2rem;
+    width: 100%;
+    list-style: none;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--text-dark);
+    transition: .5s;
+    z-index: -1;
+    /* transform: translateY(-100%); */
+}
+
+.nav_links.open{
+    transform: translateY(0);
+}
+
+.nav_links a{
+    font-weight: 500;
+    color: var(--white);
+    transition: .3s;
+}
+
+.nav_links a:hover{
+    color: var(--secondary-color);
+}
