@@ -4,15 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahesh | Full Stack Developer</title>
-
+    <title>About | Mahesh</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
     <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,64 +18,64 @@
     <nav>
         <div class="logo">Mahesh.</div>
         <div class="nav-right">
-            <a href="#work" class="nav-link active-link">Work</a>
-            <a href="about.html" class="nav-link">About</a>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
-                <i class="ph-bold ph-moon"></i>
-            </button>
+            <a href="index.html#work" class="nav-link">Work</a>
+            <a href="about.html" class="nav-link active-link">About</a>
+            <button class="theme-toggle" id="themeToggle"><i class="ph-bold ph-moon"></i></button>
         </div>
     </nav>
 
-    <header>
-        <div class="hero-bg">
-            <div class="blob blob-1"></div>
-            <div class="blob blob-2"></div>
-            <div class="blob blob-3"></div>
-        </div>
+    <section id="about-page">
+        <div class="about-container">
+            <div class="about-header">
+                <h1 class="about-title">More than just <span class="highlight">code.</span></h1>
+                <p class="about-subtitle">I'm a developer who bridges the gap between design and engineering. I build
+                    things that look good and work even better.</p>
+            </div>
 
-        <div class="hero-container">
-            <div class="hero-text-wrapper">
-                <h1 class="hero-title">
-                    Designing Interfaces<br>
-                    <span class="highlight">Building Experiences.</span>
-                </h1>
-                <p class="hero-sub">
-                    I craft minimal, user-friendly web experiences using modern frontend technologies.
-                </p>
+            <div class="bento-grid">
+                <div class="bento-item profile-card">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000" alt="Mahesh">
+                    <div class="profile-overlay">
+                        <h3>Mahesh Kumar</h3>
+                        <p>Full Stack Developer</p>
+                    </div>
+                </div>
 
-                <div class="hero-cta-group">
-                    <a href="#work" class="btn-primary">View Projects</a>
-                    <a href="assets/resume.pdf" download="Mahesh_Resume" class="btn-secondary">
-                        My Resume <i class="ph-bold ph-download-simple"></i>
-                    </a>
+                <div class="bento-item stack-card">
+                    <h3>My Arsenal</h3>
+                    <div class="tech-icons">
+                        <i class="ph-bold ph-html-logo"></i>
+                        <i class="ph-bold ph-css-logo"></i>
+                        <i class="ph-bold ph-file-js"></i>
+                        <i class="ph-bold ph-atom"></i>
+                        <i class="ph-bold ph-git-branch"></i>
+                    </div>
+                </div>
+
+                <div class="bento-item stats-card">
+                    <div class="stat">
+                        <span class="number">10+</span>
+                        <span class="label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">2+</span>
+                        <span class="label">Years Exp.</span>
+                    </div>
+                </div>
+
+                <div class="bento-item location-card">
+                    <div class="location-icon">
+                        <i class="ph-fill ph-map-pin"></i>
+                    </div>
+                    <h3>Based in India</h3>
+                    <p>Available worldwide.</p>
+                </div>
+
+                <div class="bento-item quote-card">
+                    <i class="ph-fill ph-quotes"></i>
+                    <p>"Simplicity is the ultimate sophistication."</p>
                 </div>
             </div>
-
-            <div class="hero-img-wrapper">
-                <div class="img-circle">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000" alt="Mahesh">
-                </div>
-            </div>
-        </div>
-
-        <div class="scroll-indicator">
-            <span>Scroll to see work</span>
-            <i class="ph-bold ph-arrow-down"></i>
-        </div>
-    </header>
-
-    <section id="work">
-        <div class="section-header">
-            <h2 class="section-title">Selected Works</h2>
-            <div class="filter-container">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
-                <button class="filter-btn" data-filter="react">React</button>
-                <button class="filter-btn" data-filter="js">JS</button>
-            </div>
-        </div>
-
-        <div class="projects-grid" id="projectsContainer">
         </div>
     </section>
 
@@ -92,7 +89,7 @@
                 </div>
                 <div class="footer-col links-col">
                     <h4>Navigation</h4>
-                    <a href="#work" class="footer-link">Selected Work</a>
+                    <a href="index.html#work" class="footer-link">Selected Work</a>
                     <a href="about.html" class="footer-link">About Me</a>
                     <a href="#" class="footer-link">Resume</a>
                 </div>

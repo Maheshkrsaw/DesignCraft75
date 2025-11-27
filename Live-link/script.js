@@ -1,51 +1,8 @@
 /* -------------------------------------------
-   1. PROJECT DATA (NEW ATTRACTIVE DATA)
-------------------------------------------- */
-const projectsData = [
-    {
-        id: 1,
-        title: "Neon AI Dashboard",
-        desc: "A futuristic data visualization dashboard with dark mode.",
-        category: "react",
-        // Attractive UI Image
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop", 
-        video: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" 
-    },
-    {
-        id: 2,
-        title: "Luxury Fashion Store",
-        desc: "Minimalist e-commerce interface with smooth GSAP animations.",
-        category: "html-css",
-        // High Fashion Image
-        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop",
-        video: "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
-    },
-    {
-        id: 3,
-        title: "Crypto Wallet App",
-        desc: "Secure fintech application using modern JavaScript and APIs.",
-        category: "js",
-        // Tech/Crypto Image
-        image: "https://images.unsplash.com/photo-1642104704074-907c0698cbd9?q=80&w=800&auto=format&fit=crop",
-        video: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-    },
-    {
-        id: 4,
-        title: "3D Architecture Portfolio",
-        desc: "Immersive 3D experience built with Three.js.",
-        category: "react",
-        // Architecture/Clean Image
-        image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=800&auto=format&fit=crop",
-        video: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-    }
-];
-
-/* -------------------------------------------
-   2. INITIALIZATION
+   1. GLOBAL INITIALIZATION
 ------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // Initialize Lenis (Smooth Scroll)
+    // Smooth Scroll
     const lenis = new Lenis();
     function raf(time) {
         lenis.raf(time);
@@ -53,37 +10,47 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     requestAnimationFrame(raf);
 
-    // Initialize Projects and GSAP
-    renderProjects('all');
-    initAnimations();
+    // Initialize Theme (LocalStorage Check)
+    initTheme();
+
+    // Only run Project render if on Home Page
+    const projectContainer = document.getElementById('projectsContainer');
+    if (projectContainer && typeof projectsData !== 'undefined') {
+        renderProjects('all');
+        initHomeAnimations();
+    }
+
+    // Only run About animations if on About Page
+    const aboutSection = document.getElementById('about-page');
+    if (aboutSection) {
+        initAboutAnimations();
+    }
 });
 
 /* -------------------------------------------
-   3. RENDER LOGIC
+   2. RENDER LOGIC
 ------------------------------------------- */
-const container = document.getElementById('projectsContainer');
+function renderProjects(filter) {
+    const container = document.getElementById('projectsContainer');
+    if (!container) return;
 
-function renderProjects(filter = 'all') {
     container.innerHTML = '';
-
-    const filteredData = filter === 'all' 
-        ? projectsData 
-        : projectsData.filter(p => p.category === filter);
+    // projectsData comes from projects.js now
+    const filteredData = filter === 'all' ? projectsData : projectsData.filter(p => p.category === filter);
 
     filteredData.forEach(project => {
         const card = document.createElement('div');
         card.classList.add('project-card');
-        
-        // Staggered Entrance Animation
-        gsap.fromTo(card, 
-            { y: 50, opacity: 0 }, 
-            { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
-        );
+
+        // CLICK TO OPEN LINK
+        card.addEventListener('click', () => {
+            window.open(project.link, '_blank');
+        });
+
+        gsap.fromTo(card, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5 });
 
         card.innerHTML = `
-            <div class="media-container" 
-                 onmouseenter="this.querySelector('video').play()" 
-                 onmouseleave="this.querySelector('video').pause()">
+            <div class="media-container" onmouseenter="this.querySelector('video').play()" onmouseleave="this.querySelector('video').pause()">
                 <img src="${project.image}" alt="${project.title}">
                 <video src="${project.video}" loop muted playsinline></video>
             </div>
@@ -97,7 +64,7 @@ function renderProjects(filter = 'all') {
     });
 }
 
-// Filter Button Listeners
+// Filter Listeners
 const filterBtns = document.querySelectorAll('.filter-btn');
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -108,61 +75,69 @@ filterBtns.forEach(btn => {
 });
 
 /* -------------------------------------------
-   4. THEME TOGGLE
+   3. THEME TOGGLE (LocalStorage Fix)
 ------------------------------------------- */
-const themeBtn = document.getElementById('themeToggle');
-const icon = themeBtn.querySelector('i');
+function initTheme() {
+    const themeBtn = document.getElementById('themeToggle');
+    const icon = themeBtn ? themeBtn.querySelector('i') : null;
 
-themeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    if(document.body.classList.contains('dark-mode')) {
-        icon.classList.replace('ph-moon', 'ph-sun');
-    } else {
-        icon.classList.replace('ph-sun', 'ph-moon');
+    // 1. Check LocalStorage on Load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        if (icon) icon.classList.replace('ph-moon', 'ph-sun');
     }
-});
+
+    // 2. Toggle Click Event
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+
+            // Save preference
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+            // Update Icon
+            if (isDark) {
+                icon.classList.replace('ph-moon', 'ph-sun');
+            } else {
+                icon.classList.replace('ph-sun', 'ph-moon');
+            }
+        });
+    }
+}
 
 /* -------------------------------------------
-   5. GSAP ANIMATIONS
+   4. HOME ANIMATIONS
 ------------------------------------------- */
-function initAnimations() {
+function initHomeAnimations() {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hero Text Stagger
-    gsap.from(".hero-title", {
-        y: 100,
-        opacity: 0,
-        duration: 1.2,
-        stagger: 0.2,
-        ease: "power4.out"
-    });
+    gsap.from(".hero-title", { y: 100, opacity: 0, duration: 1.2, stagger: 0.2, ease: "power4.out" });
+    gsap.from(".hero-sub", { y: 30, opacity: 0, duration: 1, delay: 0.5, ease: "power4.out" });
+    gsap.from(".img-circle", { scale: 0.5, opacity: 0, duration: 1.5, delay: 0.2, ease: "elastic.out(1, 0.5)" });
 
-    gsap.from(".hero-sub", {
-        y: 30,
-        opacity: 0,
-        duration: 1,
-        delay: 0.5,
-        ease: "power4.out"
-    });
-
-    // Image Pop In
-    gsap.from(".img-circle", {
-        scale: 0.5,
-        opacity: 0,
-        duration: 1.5,
-        delay: 0.2,
-        ease: "elastic.out(1, 0.5)"
-    });
-
-    // Scroll Indicator
     gsap.to(".scroll-indicator", {
-        scrollTrigger: {
-            trigger: "header",
-            start: "top top",
-            end: "bottom center",
-            scrub: true
-        },
+        scrollTrigger: { trigger: "header", start: "top top", end: "bottom center", scrub: true },
+        opacity: 0, y: 50
+    });
+}
+
+/* -------------------------------------------
+   5. ABOUT PAGE ANIMATIONS
+------------------------------------------- */
+function initAboutAnimations() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".about-title", { y: 50, opacity: 0, duration: 1, ease: "power4.out" });
+    gsap.from(".about-subtitle", { y: 30, opacity: 0, duration: 1, delay: 0.2, ease: "power4.out" });
+
+    gsap.from(".bento-item", {
+        y: 50,
         opacity: 0,
-        y: 50
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "power2.out",
+        delay: 0.4
     });
 }
