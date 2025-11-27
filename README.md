@@ -71,7 +71,7 @@ After completing **#75DaysOfFullStack**, I’ve entered the **DesignCraft75 proj
 ---
 
 ## 🧩 Day 9 — Landing Page  
-🔗 **Live Project:** [09-Landing-page]([https://maheshkrsaw.github.io/DesignCraft75/09-Landing-page\PROJECT_1])  
+🔗 **Live Project:** [09-Landing-page](https://maheshkrsaw.github.io/DesignCraft75/09-Landing-page\PROJECT_1)  
 - Designed a **modern landing page**  
 - Focused on **hero banner & call-to-action**  
 - Practiced **responsive layout techniques**
