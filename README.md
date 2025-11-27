@@ -23,7 +23,7 @@ After completing **#75DaysOfFullStack**, I’ve entered the **DesignCraft75 proj
 ---
 
 ## 🧩 Day 3 — E-commerce Page  
-🔗 **Live Project:** [03-Ecommere](https://maheshkrsaw.github.io/DesignCraft75/03-Ecommere)  
+🔗 **Live Project:** [03-Ecommere](https://maheshkrsaw.github.io/DesignCraft75/03-Ecommerce)  
 - Designed a **basic E-commerce landing page**  
 - Added **responsive product sections**  
 - Worked on **navigation bar & call-to-action buttons**  
