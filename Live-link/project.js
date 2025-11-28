@@ -16,7 +16,7 @@ const projectsData = [
         category: "react",
         link: "https://reactproject-with-api.netlify.app/",
         image: "assets/s-images/REACT-2.png",
-        video: "Live-link\assets\s-video\react-e-comerce.mp4"
+        video: "assets/s-video/react-e-comerce.mp4"
     },
 
     // HTML/CSS Projects
@@ -27,7 +27,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/13-dribble-clone",
         image: "assets/s-images/DRIBBLE.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/dribble.mp4"
     },
     {
         id: 4,
@@ -36,7 +36,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/05-WINTER-SPECIAL-ICECREAM",
         image: "assets/s-images/ICECREAM.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/icecream.mp4"
     },
     {
         id: 5,
@@ -45,7 +45,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/03-Ecommerce",
         image: "assets/s-images/CARA ATTRASCTIVE.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/cara.mp4"
     },
     {
         id: 6,
@@ -54,7 +54,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/02-blinkit-clone",
         image: "assets/s-images/BLINKIT.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/blinkit.mp4"
     },
     {
         id: 7,
@@ -63,7 +63,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/04-Landing-page",
         image: "assets/s-images/E-LEARNING.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/e-learning.mp4"
     },
     {
         id: 8,
@@ -72,7 +72,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/14-obys-agency-clone",
         image: "assets/s-images/OBYS.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/obys-agency.mp4"
     },
     {
         id: 9,
@@ -81,7 +81,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/15-product-designer",
         image: "assets/s-images/producr-designere.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/product-designer.mp4"
     },
     {
         id: 10,
@@ -90,7 +90,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/07-Porsche",
         image: "assets/s-images/PORSCHE.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/porshce.mp4"
     },
     {
         id: 11,
@@ -99,7 +99,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/10-cotton-landing-page",
         image: "assets/s-images/cotton ladning page.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/cotton-landing-page.mp4"
     },
     {
         id: 12,
@@ -108,7 +108,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/20-Hero-Panther-landing-page",
         image: "assets/s-images/MARVEL.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/black-panther.mp4"
     },
     {
         id: 13,
@@ -117,7 +117,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/18-sheriyans-landig-page",
         image: "assets/s-images/sheriyans .png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/sheriyans.mp4"
     },
     {
         id: 14,
@@ -126,7 +126,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/19-PLAY-landing-pages/",
         image: "assets/s-images/PLAY-KLANDINMG.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/play.mp4"
     },
     {
         id: 15,
@@ -135,7 +135,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/08-Starbucks",
         image: "assets/s-images/STARBUCKS.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/starbucks.mp4"
     },
     {
         id: 16,
@@ -144,7 +144,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/12-Premier landing-page",
         image: "assets/s-images/premier-lading-page.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/premier.mp4"
     },
     {
         id: 17,
@@ -153,7 +153,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/09-Landing-page/PROJECT_1",
         image: "assets/s-images/modern landing page -lightly padded.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/modern-landing-page.mp4"
     },
     {
         id: 18,
@@ -162,7 +162,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/06-Nature-Landing-page",
         image: "assets/s-images/nATURE.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/nature.mp4"
     },
     {
         id: 19,
@@ -171,7 +171,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/16-pintrest-clone",
         image: "assets/s-images/PINTREASDT.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/PINTREST.mp4"
     },
     {
         id: 20,
@@ -180,7 +180,7 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/11-attracive-landing-page",
         image: "assets/s-images/john walker.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/attractive-landing-page.mp4"
     },
     {
         id: 21,
@@ -189,6 +189,6 @@ const projectsData = [
         category: "html-css",
         link: "https://maheshkrsaw.github.io/DesignCraft75/01-sidebar-menu",
         image: "assets/s-images/SIDERBAR.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "assets/s-video/sidebar.mp4"
     }
 ];
