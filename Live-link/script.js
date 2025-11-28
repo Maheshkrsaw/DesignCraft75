@@ -1,7 +1,21 @@
+/* -------------------------------------------
+   1. GLOBAL INITIALIZATION
+------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Init Smooth Scroll
+    
+    // 1. Init Smooth Scroll (Lenis with Premium Easing)
     if (typeof Lenis !== 'undefined') {
-        const lenis = new Lenis();
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Exponential easing
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+        });
+
         function raf(time) {
             lenis.raf(time);
             requestAnimationFrame(raf);
@@ -9,54 +23,58 @@ document.addEventListener("DOMContentLoaded", () => {
         requestAnimationFrame(raf);
     }
 
-    // 2. Init Theme (Check LocalStorage)
+    // 2. Init Theme
     initTheme();
 
-    // 3. Render Projects (With Safety Check)
+    // 3. Register GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 4. Render Projects (Home Page)
     const projectContainer = document.getElementById('projectsContainer');
     if (projectContainer) {
         if (typeof projectsData !== 'undefined') {
             renderProjects('all');
             initHomeAnimations();
         } else {
-            console.error("projectsData is missing! Check if projects.js is linked correctly.");
-            projectContainer.innerHTML = "<p style='text-align:center; padding: 2rem;'>Error loading projects. Check console.</p>";
+            console.error("projectsData is missing! Check projects.js linkage.");
         }
     }
 
-    // 4. About Page Animations
+    // 5. About Page Animations
     const aboutSection = document.getElementById('about-page');
     if (aboutSection) {
         initAboutAnimations();
     }
+
+    // 6. Global Animations (Footer, Section Titles)
+    initGlobalAnimations();
 });
 
-/* --- RENDER PROJECTS FUNCTION --- */
+/* -------------------------------------------
+   2. RENDER LOGIC
+------------------------------------------- */
 function renderProjects(filter) {
     const container = document.getElementById('projectsContainer');
     if (!container) return;
 
-    container.innerHTML = '';
+    container.innerHTML = ''; // Clear existing
 
-    // Safety check inside function
+    // Safety check
     if (typeof projectsData === 'undefined') return;
 
-    // Filter logic
-    const filteredData = filter === 'all'
-        ? projectsData
+    const filteredData = filter === 'all' 
+        ? projectsData 
         : projectsData.filter(p => p.category === filter);
 
     filteredData.forEach(project => {
         const card = document.createElement('div');
-        card.classList.add('project-card');
+        card.classList.add('project-card'); // Base styling
+        card.classList.add('reveal-card');  // Marker for animation
 
         // Click to Open
         card.addEventListener('click', () => {
             window.open(project.link, '_blank');
         });
-
-        // Animation for entrance
-        gsap.fromTo(card, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5 });
 
         card.innerHTML = `
             <div class="media-container" onmouseenter="this.querySelector('video').play()" onmouseleave="this.querySelector('video').pause()">
@@ -71,6 +89,9 @@ function renderProjects(filter) {
         `;
         container.appendChild(card);
     });
+
+    // TRIGGER STAGGERED ANIMATION
+    animateProjects();
 }
 
 // Filter Button Listeners
@@ -83,12 +104,14 @@ filterBtns.forEach(btn => {
     });
 });
 
-/* --- THEME TOGGLE FIXED --- */
+/* -------------------------------------------
+   3. THEME TOGGLE (Fixed Logic)
+------------------------------------------- */
 function initTheme() {
     const themeBtn = document.getElementById('themeToggle');
     const icon = themeBtn ? themeBtn.querySelector('i') : null;
 
-    // Check saved theme
+    // Check LocalStorage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
@@ -115,13 +138,42 @@ function initTheme() {
     }
 }
 
-/* --- ANIMATIONS --- */
-function initHomeAnimations() {
-    gsap.registerPlugin(ScrollTrigger);
+/* -------------------------------------------
+   4. ADVANCED ANIMATIONS (The "Maza Aa Gaya" Part)
+------------------------------------------- */
 
-    gsap.from(".hero-title", { y: 100, opacity: 0, duration: 1.2, stagger: 0.2, ease: "power4.out" });
-    gsap.from(".hero-sub", { y: 30, opacity: 0, duration: 1, delay: 0.5, ease: "power4.out" });
-    gsap.from(".img-circle", { scale: 0.5, opacity: 0, duration: 1.5, delay: 0.2, ease: "elastic.out(1, 0.5)" });
+// A. Projects Wave Effect
+function animateProjects() {
+    // Kill previous triggers to prevent bugs when filtering
+    ScrollTrigger.getAll().forEach(t => {
+        if(t.vars.trigger === '.reveal-card') t.kill();
+    });
+
+    gsap.fromTo(".reveal-card", 
+        { y: 100, opacity: 0 },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            stagger: 0.1, // Creates the wave effect
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: "#projectsContainer",
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        }
+    );
+}
+
+// B. Home Hero (Load Sequence)
+function initHomeAnimations() {
+    const tl = gsap.timeline();
+
+    tl.from(".hero-title", { y: 100, opacity: 0, duration: 1, ease: "power4.out" })
+      .from(".hero-sub", { y: 50, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.6")
+      .from(".hero-cta-group", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
+      .from(".img-circle", { scale: 0.8, opacity: 0, duration: 1.5, ease: "elastic.out(1, 0.5)" }, "-=1");
 
     gsap.to(".scroll-indicator", {
         scrollTrigger: { trigger: "header", start: "top top", end: "bottom center", scrub: true },
@@ -129,16 +181,51 @@ function initHomeAnimations() {
     });
 }
 
+// C. About Page (Story & Stats Reveal)
 function initAboutAnimations() {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.from(".about-title", { y: 50, opacity: 0, duration: 1, ease: "power4.out" });
-    gsap.from(".about-subtitle", { y: 30, opacity: 0, duration: 1, delay: 0.2, ease: "power4.out" });
-    gsap.from(".bento-item", {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power2.out",
-        delay: 0.4
+    // 1. Header
+    gsap.from(".about-header", { y: 50, opacity: 0, duration: 1, delay: 0.2 });
+
+    // 2. Story Image Slide In
+    gsap.from(".story-image", {
+        scrollTrigger: { trigger: ".story-section", start: "top 80%" },
+        x: -50, opacity: 0, duration: 1, ease: "power3.out"
+    });
+
+    // 3. Story Text Slide In
+    gsap.utils.toArray('.story-item').forEach((item, i) => {
+        gsap.from(item, {
+            scrollTrigger: { trigger: item, start: "top 85%" },
+            x: 50, opacity: 0, duration: 0.8, delay: i * 0.2, ease: "power3.out"
+        });
+    });
+
+    // 4. Achievements Pop Up
+    gsap.from(".stat-card", {
+        scrollTrigger: { trigger: ".achievements-section", start: "top 80%" },
+        scale: 0.8, opacity: 0, duration: 0.6, stagger: 0.1, ease: "back.out(1.7)"
+    });
+
+    // 5. Tech Stack Fade In
+    gsap.from(".tech-item", {
+        scrollTrigger: { trigger: ".tech-section", start: "top 85%" },
+        y: 30, opacity: 0, duration: 0.5, stagger: 0.05, ease: "power2.out"
+    });
+}
+
+// D. Global (Section Headers & Footer)
+function initGlobalAnimations() {
+    // Section Headers
+    gsap.utils.toArray('.section-header, .section-heading').forEach(header => {
+        gsap.from(header, {
+            scrollTrigger: { trigger: header, start: "top 85%" },
+            y: 50, opacity: 0, duration: 1, ease: "power3.out"
+        });
+    });
+
+    // Footer Reveal
+    gsap.from(".footer-container", {
+        scrollTrigger: { trigger: "footer", start: "top 90%" },
+        y: 50, opacity: 0, duration: 1, ease: "power3.out"
     });
 }
