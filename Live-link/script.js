@@ -1,52 +1,61 @@
-/* -------------------------------------------
-   1. GLOBAL INITIALIZATION
-------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
-    // Smooth Scroll
-    const lenis = new Lenis();
-    function raf(time) {
-        lenis.raf(time);
+    // 1. Init Smooth Scroll
+    if (typeof Lenis !== 'undefined') {
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
         requestAnimationFrame(raf);
     }
-    requestAnimationFrame(raf);
 
-    // Initialize Theme (LocalStorage Check)
+    // 2. Init Theme (Check LocalStorage)
     initTheme();
 
-    // Only run Project render if on Home Page
+    // 3. Render Projects (With Safety Check)
     const projectContainer = document.getElementById('projectsContainer');
-    if (projectContainer && typeof projectsData !== 'undefined') {
-        renderProjects('all');
-        initHomeAnimations();
+    if (projectContainer) {
+        if (typeof projectsData !== 'undefined') {
+            renderProjects('all');
+            initHomeAnimations();
+        } else {
+            console.error("projectsData is missing! Check if projects.js is linked correctly.");
+            projectContainer.innerHTML = "<p style='text-align:center; padding: 2rem;'>Error loading projects. Check console.</p>";
+        }
     }
 
-    // Only run About animations if on About Page
+    // 4. About Page Animations
     const aboutSection = document.getElementById('about-page');
     if (aboutSection) {
         initAboutAnimations();
     }
 });
 
-/* -------------------------------------------
-   2. RENDER LOGIC
-------------------------------------------- */
+/* --- RENDER PROJECTS FUNCTION --- */
 function renderProjects(filter) {
     const container = document.getElementById('projectsContainer');
     if (!container) return;
 
     container.innerHTML = '';
-    // projectsData comes from projects.js now
-    const filteredData = filter === 'all' ? projectsData : projectsData.filter(p => p.category === filter);
+
+    // Safety check inside function
+    if (typeof projectsData === 'undefined') return;
+
+    // Filter logic
+    const filteredData = filter === 'all'
+        ? projectsData
+        : projectsData.filter(p => p.category === filter);
 
     filteredData.forEach(project => {
         const card = document.createElement('div');
         card.classList.add('project-card');
 
-        // CLICK TO OPEN LINK
+        // Click to Open
         card.addEventListener('click', () => {
             window.open(project.link, '_blank');
         });
 
+        // Animation for entrance
         gsap.fromTo(card, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5 });
 
         card.innerHTML = `
@@ -64,7 +73,7 @@ function renderProjects(filter) {
     });
 }
 
-// Filter Listeners
+// Filter Button Listeners
 const filterBtns = document.querySelectorAll('.filter-btn');
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -74,42 +83,39 @@ filterBtns.forEach(btn => {
     });
 });
 
-/* -------------------------------------------
-   3. THEME TOGGLE (LocalStorage Fix)
-------------------------------------------- */
+/* --- THEME TOGGLE FIXED --- */
 function initTheme() {
     const themeBtn = document.getElementById('themeToggle');
     const icon = themeBtn ? themeBtn.querySelector('i') : null;
 
-    // 1. Check LocalStorage on Load
+    // Check saved theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
-        if (icon) icon.classList.replace('ph-moon', 'ph-sun');
+        if (icon) {
+            icon.classList.remove('ph-moon');
+            icon.classList.add('ph-sun');
+        }
     }
 
-    // 2. Toggle Click Event
     if (themeBtn) {
         themeBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
             const isDark = document.body.classList.contains('dark-mode');
-
-            // Save preference
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
-            // Update Icon
-            if (isDark) {
-                icon.classList.replace('ph-moon', 'ph-sun');
-            } else {
-                icon.classList.replace('ph-sun', 'ph-moon');
+            if (icon) {
+                if (isDark) {
+                    icon.classList.replace('ph-moon', 'ph-sun');
+                } else {
+                    icon.classList.replace('ph-sun', 'ph-moon');
+                }
             }
         });
     }
 }
 
-/* -------------------------------------------
-   4. HOME ANIMATIONS
-------------------------------------------- */
+/* --- ANIMATIONS --- */
 function initHomeAnimations() {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -123,15 +129,10 @@ function initHomeAnimations() {
     });
 }
 
-/* -------------------------------------------
-   5. ABOUT PAGE ANIMATIONS
-------------------------------------------- */
 function initAboutAnimations() {
     gsap.registerPlugin(ScrollTrigger);
-
     gsap.from(".about-title", { y: 50, opacity: 0, duration: 1, ease: "power4.out" });
     gsap.from(".about-subtitle", { y: 30, opacity: 0, duration: 1, delay: 0.2, ease: "power4.out" });
-
     gsap.from(".bento-item", {
         y: 50,
         opacity: 0,
