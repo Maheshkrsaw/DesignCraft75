@@ -43,7 +43,7 @@ const projectsData = [
         title: "E-Commerce Landing",
         desc: "Basic e-commerce homepage with responsive layout.",
         category: "html-css",
-        link: "https://maheshkrsaw.github.io/DesignCraft75/03-Ecommecre",
+        link: "https://maheshkrsaw.github.io/DesignCraft75/03-Ecommerce",
         image: "assets/s-images/CARA ATTRASCTIVE.png",
         video: "assets/s-video/sample-5s.mp4"
     },
