@@ -16,7 +16,7 @@ const projectsData = [
         category: "react",
         link: "https://reactproject-with-api.netlify.app/",
         image: "assets/s-images/REACT-2.png",
-        video: "assets/s-video/sample-5s.mp4"
+        video: "Live-link\assets\s-video\react-e-comerce.mp4"
     },
 
     // HTML/CSS Projects
