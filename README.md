@@ -158,6 +158,125 @@ After completing **#75DaysOfFullStack**, I’ve entered the **DesignCraft75 proj
 - Strengthened confidence in **building real-world projects**
 
 ---
+# 🎨 #DesignCraft75 — Days 19 to 31 🚀  
+
+### 📅 Challenge Continuation: #75DaysOfFullStack  
+Continuing the **DesignCraft75 project phase**, I focused on **interactive projects, calculators, apps, and UI effects** — practicing **HTML, CSS, JS, and DOM manipulations**. 💻✨  
+
+---
+
+## 🧩 Day 19 — PLAY Landing Page  
+🔗 **Live Project:** [19-PLAY-landing-pages](https://maheshkrsaw.github.io/DesignCraft75/19-PLAY-landing-pages)  
+- Created a **fun and interactive landing page**  
+- Focused on **responsive sections & hover effects**  
+- Practiced **color contrasts & layout balance**
+
+---
+
+## 🧩 Day 20 — Hero Panther Landing Page  
+🔗 **Live Project:** [20-Hero-Panther-landing-page](https://maheshkrsaw.github.io/DesignCraft75/20-Hero-Panther-landing-page)  
+- Designed **hero section with bold imagery**  
+- Practiced **flexbox alignment & typography**  
+- Improved **navigation & call-to-action styling**
+
+---
+
+## 🧩 Day 21 — Age Calculator  
+🔗 **Live Project:** [21-Age-calculator](https://maheshkrsaw.github.io/DesignCraft75/21-Age-calculator/)  
+- Built a **functional age calculator**  
+- Learned **JS date objects & DOM interaction**  
+- Practiced **input validation & result display**
+
+---
+
+## 🧩 Day 22 — Modern Calculator  
+🔗 **Live Project:** [22-Calculator](https://maheshkrsaw.github.io/DesignCraft75/22-Calculator/)  
+- Created a **modern calculator with interactive buttons**  
+- Focused on **JS logic & click event handling**  
+- Practiced **UI styling for functional components**
+
+---
+
+## 🧩 Day 23 — Notes App  
+🔗 **Live Project:** [23-Notes](https://maheshkrsaw.github.io/DesignCraft75/23-Notes/)  
+- Built a **simple notes-taking web app**  
+- Learned **localStorage for data persistence**  
+- Practiced **dynamic DOM manipulation & UX design**
+
+---
+
+## 🧩 Day 24 — Stopwatch  
+🔗 **Live Project:** [24-stopwatch](https://maheshkrsaw.github.io/DesignCraft75/24-stopwatch/)  
+- Created a **stopwatch with start, pause, reset**  
+- Practiced **JS timing functions & DOM updates**  
+- Focused on **clean UI & responsive layout**
+
+---
+
+## 🧩 Day 25 — Digital Clock  
+🔗 **Live Project:** [25-Digital-Clock](https://maheshkrsaw.github.io/DesignCraft75/25-Digital-Clock/)  
+- Built a **real-time digital clock**  
+- Practiced **JS intervals & dynamic time display**  
+- Designed **minimalist UI for clarity**
+
+---
+
+## 🧩 Day 26 — Image Carousels  
+🔗 **Live Project:** [26-image-crousers](https://maheshkrsaw.github.io/DesignCraft75/26-image-crousers/)  
+- Created **image carousel sliders**  
+- Learned **JS navigation & transitions**  
+- Practiced **smooth scrolling & auto-play features**
+
+---
+
+## 🧩 Day 27 — Mini Calendar  
+🔗 **Live Project:** [27-Mini-calendar](https://maheshkrsaw.github.io/DesignCraft75/27-Mini-calendar/)  
+- Designed a **mini calendar with selectable dates**  
+- Practiced **JS date manipulation & UI updates**  
+- Focused on **responsive layout & hover effects**
+
+---
+
+## 🧩 Day 28 — Form Validation  
+🔗 **Live Project:** [28-Form-Validation](https://maheshkrsaw.github.io/DesignCraft75/28-Form-Validation/)  
+- Implemented **form input validations**  
+- Practiced **JS error handling & user feedback**  
+- Focused on **clean form layout & UX**
+
+---
+
+## 🧩 Day 29 — Instagram Clone  
+🔗 **Live Project:** [29-insta-clone](https://maheshkrsaw.github.io/DesignCraft75/29-insta-clone/)  
+- Built a **mini Instagram UI clone**  
+- Practiced **image grids, likes, and hover effects**  
+- Focused on **responsive design for social media layout**
+
+---
+
+## 🧩 Day 30 — Job Dashboard  
+🔗 **Live Project:** [31-job dashboard](https://maheshkrsaw.github.io/DesignCraft75/31-job%20dashboard/)  
+- Designed a **dashboard UI for jobs tracking**  
+- Practiced **cards layout & responsive tables**  
+- Learned **clean spacing & component design**
+
+---
+
+## 🧩 Day 31 — Glitch Effect  
+🔗 **Live Project:** [30-Glitch-effect](https://maheshkrsaw.github.io/DesignCraft75/30-Glitch-effect/)  
+- Created **glitch text & image effects**  
+- Practiced **CSS animations & keyframes**  
+- Focused on **visual appeal & modern UI trends**
+
+---
+
+## 🪞 Reflection (Days 19–31)  
+> “Interactivity + design experimentation = deeper coding intuition.”  
+
+- Explored **JS-based interactive projects**  
+- Learned **DOM manipulation, event handling, and real-time updates**  
+- Strengthened **UI/UX design skills** for practical applications
+
+---
 
 ### 🔗 Connect With Me 🌐  
 🐦 **Twitter/X:** [@kumarMahesh9304](https://x.com/kumarMahesh9304)  
@@ -167,5 +286,8 @@ After completing **#75DaysOfFullStack**, I’ve entered the **DesignCraft75 proj
 🎨 **#75DaysOfDSA Repo:** [github.com/Maheshkrsaw/75-Days-of-DSA-Grind](https://github.com/Maheshkrsaw/75-Days-of-DSA-Grind)
 
 ---
+
+> 💬 _“Each day of building makes me a better designer and developer — small steps lead to big growth.”_
+
 
 > 💬 _“Each day of practice makes me 1% better — and that’s all I need to keep going.”_
