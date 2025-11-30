@@ -198,7 +198,7 @@ const projectsData = [
     category: "js",
     link: "https://maheshkrsaw.github.io/DesignCraft75/21-Age-calculator/",
     image: "assets/s-images/age-calculator.png",
-    video: "assets/s-video/default.mp4",
+    video: "assets/s-video/age-calculator.mp4",
   },
   {
     id: 23,
@@ -207,7 +207,7 @@ const projectsData = [
     category: "js",
     link: "https://maheshkrsaw.github.io/DesignCraft75/22-Calculator/",
     image: "assets/s-images/modern-calculator.png",
-    video: "assets/s-video/default.mp4",
+    video: "assets/s-video/modern-calculator.mp4",
   },
   {
     id: 24,
@@ -216,7 +216,7 @@ const projectsData = [
     category: "js",
     link: "https://maheshkrsaw.github.io/DesignCraft75/23-Notes/",
     image: "assets/s-images/notes.png",
-    video: "assets/s-video/default.mp4",
+    video: "assets/s-video/notes.mp4",
   },
   {
     id: 25,
@@ -225,7 +225,7 @@ const projectsData = [
     category: "js",
     link: "https://maheshkrsaw.github.io/DesignCraft75/24-stopwatch/",
     image: "assets/s-images/stopwatch.png",
-    video: "assets/s-video/default.mp4",
+    video: "assets/s-video/stopwatch.mp4",
   },
   {
     id: 26,
@@ -234,7 +234,7 @@ const projectsData = [
     category: "js",
     link: "https://maheshkrsaw.github.io/DesignCraft75/25-Digital-Clock/",
     image: "assets/s-images/digital-clock.png",
-    video: "assets/s-video/default.mp4",
+    video: "assets/s-video/digital-clock.mp4",
   },
   {
     id: 27,
@@ -243,7 +243,7 @@ const projectsData = [
     category: "js",
     link: "https://maheshkrsaw.github.io/DesignCraft75/26-image-crousers/",
     image: "assets/s-images/image-crousels.png",
-    video: "assets/s-video/default.mp4",
+    video: "assets/s-video/image-crousels.mp4",
   },
   {
     id: 28,
@@ -252,7 +252,7 @@ const projectsData = [
     category: "js",
     link: "https://maheshkrsaw.github.io/DesignCraft75/27-Mini-calendar/",
     image: "assets/s-images/mini-calendasr.png",
-    video: "assets/s-video/default.mp4",
+    video: "assets/s-video/mini calendar.mp4",
   },
   {
     id: 29,
@@ -261,7 +261,7 @@ const projectsData = [
     category: "js",
     link: "https://maheshkrsaw.github.io/DesignCraft75/28-Form-Validation/",
     image: "assets/s-images/form-validation.png",
-    video: "assets/s-video/default.mp4",
+    video: "assets/s-video/form-validation.mp4",
   },
   {
     id: 30,
@@ -270,7 +270,7 @@ const projectsData = [
     category: "js",
     link: "https://maheshkrsaw.github.io/DesignCraft75/29-insta-clone/",
     image: "assets/s-images/insta-clone.png",
-    video: "assets/s-video/default.mp4",
+    video: "assets/s-video/insta-clone.mp4",
   },
   {
     id: 31,
@@ -279,7 +279,7 @@ const projectsData = [
     category: "js",
     link: "https://maheshkrsaw.github.io/DesignCraft75/30-Glitch-effect/",
     image: "assets/s-images/glitch.png",
-    video: "assets/s-video/default.mp4",
+    video: "assets/s-video/glitch-effect.mp4",
   },
   {
     id: 32,
@@ -288,6 +288,6 @@ const projectsData = [
     category: "js",
     link: "https://maheshkrsaw.github.io/DesignCraft75/31-job%20dashboard/",
     image: "assets/s-images/job-dashboard.png",
-    video: "assets/s-video/default.mp4",
+    video: "assets/s-video/job dashboard .mp4",
   },
 ];
