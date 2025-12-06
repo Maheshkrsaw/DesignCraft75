@@ -7,7 +7,7 @@ const projectsData = [
     category: "react",
     link: "https://react-filmyworld.netlify.app/",
     image: "assets/s-images/filmyworld.png",
-    video: "assets/s-video/sample-5s.mp4",
+    video: "assets/s-video/Filmy-World.mp4",
   },
   {
     id: 2,
