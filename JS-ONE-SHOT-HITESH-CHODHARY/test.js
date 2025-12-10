@@ -1,2 +1,2 @@
 
-console.log("02">=2);
+console.log("02"===2);
