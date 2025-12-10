@@ -1,6 +1,2 @@
-let score=undefined
 
-console.log(typeof score)
-let ValueinNumber=Boolean(score)
-console.log(ValueinNumber);
-  
+console.log("02">=2);
