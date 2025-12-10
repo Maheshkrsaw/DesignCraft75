@@ -1,5 +1,6 @@
-let score="33abc"
+let score=undefined
 
 console.log(typeof score)
-let ValueinNumber=Number(score)
+let ValueinNumber=Boolean(score)
 console.log(ValueinNumber);
+  
