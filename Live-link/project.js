@@ -289,7 +289,7 @@ const projectsData = [
     video: "assets/s-video/job-dashboard.mp4",
   },
 
-  // 33 - 51 (new items — from Day 32 to Day 50)
+
   {
     id: 33,
     title: "Vita Health Care",
