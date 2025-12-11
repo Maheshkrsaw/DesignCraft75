@@ -278,6 +278,178 @@ Continuing the **DesignCraft75 project phase**, I focused on **interactive proje
 
 ---
 
+# 🎨 #DesignCraft75 — Days 32 to 50 🚀  
+Leveling up the challenge with **real-world apps**, **API-powered tools**, and **full product-style UI/UX**.  
+These 19 days were focused on **logic building, API integration, and advanced frontend engineering**. 💻🔥  
+
+---
+
+## 🧩 Day 32 — Vita Health Care  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/32-Health-care/  
+- Designed a clean **medical website UI**  
+- Focused on soft color themes & modern layouts  
+- Practiced reusable component structuring  
+
+---
+
+## 🧩 Day 33 — Insta Reel Clone  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/33-insta-reel-clone/  
+- Built a **short video reel interface**  
+- Used **auto-play features & smooth transitions**  
+- Focused on mobile-first layout  
+
+---
+
+## 🧩 Day 34 — CineScope (Movie App)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/34-CineScope-Movie/  
+- Implemented **TMDB API for live movie data**  
+- Added search, categories & posters  
+- Great practice for **API + UI integration**
+
+---
+
+## 🧩 Day 35 — CashFlow (Expense Tracker)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/35-CashFlow-expense-Tracker/  
+- Built expense calculations with UI categories  
+- Practiced localStorage to save records  
+- Strengthened data-handling logic  
+
+---
+
+## 🧩 Day 36 — TaskMaker (Trello-like App)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/36-TaskMaker-project/  
+- Created draggable cards (kanban system)  
+- Implemented **add/edit/delete tasks**  
+- Focused on workflow UI design  
+
+---
+
+## 🧩 Day 37 — TravelGo  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/37-TravelPlan  
+- Created a beautiful **travel landing page**  
+- Practiced animations + layout hierarchy  
+- Strengthened hero section design  
+
+---
+
+## 🧩 Day 38 — API Master (Postman Clone)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/38-Postman  
+- Built a mini **API testing tool**  
+- Implemented GET/POST requests  
+- Learned JSON formatting & handling  
+
+---
+
+## 🧩 Day 39 — CodeCraft (Live Preview Editor)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/39-Website-Live-Preview  
+- Built a **real-time HTML/CSS/JS editor**  
+- Practiced iframe rendering & live updates  
+- Boosted core web understanding  
+
+---
+
+## 🧩 Day 40 — TypeBlitz  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/40-Typing-Master  
+- Created a typing speed test  
+- Implemented timer + accuracy logic  
+- Improved DOM event handling  
+
+---
+
+## 🧩 Day 41 — JobFinder (Job Portal)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/41-Job-Finder  
+- Designed job listing cards  
+- Added filtering UI  
+- Focused on clean layout & spacing  
+
+---
+
+## 🧩 Day 42 — DreamHome (Real Estate)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/42-Property-Dealer  
+- Created real-estate modern UI  
+- Practiced grid + minimal design  
+- Worked on high-quality visual layout  
+
+---
+
+## 🧩 Day 43 — SkillSpire (E-Learning)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/43-Course-Selling  
+- Built e-learning homepage UI  
+- Worked on cards, pricing, categories  
+- Focused on clarity & conversion design  
+
+---
+
+## 🧩 Day 44 — DriveX (Car Rental)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/44-Car-Rental-Drivex  
+- Designed car rental landing page  
+- Practiced premium UI theme + gradients  
+- Created responsive car showcase  
+
+---
+
+## 🧩 Day 45 — NeonArt (NFT Marketplace)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/45-Neon-Selling-Website  
+- Built an **NFT-style neon marketplace**  
+- Experimented with dark UI + glow effects  
+- Improved visual design & typography  
+
+---
+
+## 🧩 Day 46 — LensLoop (Photography App)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/46-Lensloop-(unplash-clone)  
+- Created **Unsplash-style photo gallery**  
+- Practiced API integration  
+- Learned infinite scroll layout  
+
+---
+
+## 🧩 Day 47 — CoinDash (Crypto Dashboard)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/47-CoinDash-(Binance)  
+- Built a real-time crypto dashboard  
+- Practiced API fetching multiple coins  
+- Designed charts-style dashboard UI  
+
+---
+
+## 🧩 Day 48 — BrainWave (GPT Clone)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/48-BrainWave-(GptClone)  
+- Created a beautiful GPT-style interface  
+- Practiced chatbot UI layouts  
+- Strengthened minimal modern design  
+
+---
+
+## 🧩 Day 49 — GameZone (Esports Platform)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/49-Gamezone  
+- Built a gaming-themed landing page  
+- Practiced neon colors + bold UI  
+- Improved hero section storytelling  
+
+---
+
+## 🧩 Day 50 — StreamX (Netflix Clone)  
+🔗 **Live:** https://maheshkrsaw.github.io/DesignCraft75/50-StreamX-(netflix)  
+- Designed a Netflix-style homepage  
+- Worked on banners + card sliders  
+- Practiced responsive movie grid UI  
+
+---
+
+## 🪞 Reflection (Days 32–50)  
+> “These days transformed UI practice into real product thinking.”  
+
+### Key Learnings  
+- Mastery in **API usage**, **DOM logic**, **localStorage**, **real-time apps**  
+- Stronger focus on **modern UI/UX**, spacing, typography, and responsive layout  
+- Built both **functional apps & premium landing pages**  
+- Consistency boosted creativity and design instincts  
+
+---
+
+> _“Every single project is a brick. I’m building my empire — one day at a time.”_ 🚀
+
+
 ### 🔗 Connect With Me 🌐  
 🐦 **Twitter/X:** [@kumarMahesh9304](https://x.com/kumarMahesh9304)  
 💻 **GitHub Profile:** [github.com/Maheshkrsaw](https://github.com/Maheshkrsaw)  
