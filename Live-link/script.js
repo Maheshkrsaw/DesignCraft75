@@ -53,6 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
 /* -------------------------------------------
    2. RENDER LOGIC
 ------------------------------------------- */
+/* -------------------------------------------
+   2. RENDER LOGIC (Updated for Cloudinary Videos)
+------------------------------------------- */
 function renderProjects(filter) {
     const container = document.getElementById('projectsContainer');
     if (!container) return;
@@ -68,31 +71,62 @@ function renderProjects(filter) {
 
     filteredData.forEach(project => {
         const card = document.createElement('div');
-        card.classList.add('project-card'); // Base styling
-        card.classList.add('reveal-card');  // Marker for animation
+        card.classList.add('project-card', 'reveal-card');
 
-        // Click to Open
+        // Click to Open Project Link
         card.addEventListener('click', () => {
             window.open(project.link, '_blank');
         });
 
-        card.innerHTML = `
-            <div class="media-container" onmouseenter="this.querySelector('video').play()" onmouseleave="this.querySelector('video').pause()">
-                <img src="${project.image}" alt="${project.title}">
-                <video src="${project.video}" loop muted playsinline></video>
-            </div>
-            <div class="card-content">
-                <span class="card-tags">${project.category}</span>
-                <h3 class="card-title">${project.title}</h3>
-                <p class="card-desc">${project.desc}</p>
-            </div>
+        // Media Container
+        const mediaContainer = document.createElement('div');
+        mediaContainer.classList.add('media-container');
+
+        // Thumbnail Image
+        const img = document.createElement('img');
+        img.src = project.image; // Cloudinary image URL
+        img.alt = project.title;
+
+        // Video Element
+        const video = document.createElement('video');
+        video.src = project.video; // Cloudinary video URL
+        video.loop = true;
+        video.muted = true;
+        video.playsInline = true;
+        video.preload = 'metadata'; // Only metadata, faster load
+        video.poster = project.image; // fallback if video not loaded
+
+        mediaContainer.appendChild(img);
+        mediaContainer.appendChild(video);
+        card.appendChild(mediaContainer);
+
+        // Card Content
+        const cardContent = document.createElement('div');
+        cardContent.classList.add('card-content');
+        cardContent.innerHTML = `
+            <span class="card-tags">${project.category}</span>
+            <h3 class="card-title">${project.title}</h3>
+            <p class="card-desc">${project.desc}</p>
         `;
+        card.appendChild(cardContent);
+
         container.appendChild(card);
+
+        // Hover Logic for Video
+        mediaContainer.addEventListener('mouseenter', () => {
+            video.play().catch(err => console.log(err));
+        });
+
+        mediaContainer.addEventListener('mouseleave', () => {
+            video.pause();
+            video.currentTime = 0;
+        });
     });
 
-    // TRIGGER STAGGERED ANIMATION
+    // Trigger Staggered GSAP Animation
     animateProjects();
 }
+
 
 // Filter Button Listeners
 const filterBtns = document.querySelectorAll('.filter-btn');
