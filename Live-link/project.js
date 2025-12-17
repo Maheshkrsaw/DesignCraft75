@@ -7,7 +7,8 @@ const projectsData = [
     category: "html-css",
     link: "https://react-filmyworld.netlify.app/",
     image: "assets/s-images/filmyworld.png",
-    video: "assets/s-video/Filmy-World.mp4",
+    video:
+      "https://res.cloudinary.com/dh78xlgfs/video/upload/v1765990987/Filmy-World_a4qhay.mp4",
   },
   {
     id: 2,
@@ -288,7 +289,6 @@ const projectsData = [
     image: "assets/s-images/job-dashboard.png",
     video: "assets/s-video/job-dashboard.mp4",
   },
-
 
   {
     id: 33,
