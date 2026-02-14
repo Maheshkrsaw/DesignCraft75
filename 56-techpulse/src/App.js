@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Clock, User, Calendar, ArrowRight, BookOpen, Hash, Flame } from 'lucide-react';
 
 // --- 1. Heavy Content Data ---
@@ -66,7 +66,7 @@ const ARTICLES = [
   },
 ];
 
-// --- 2. Navbar Component ---
+// --- Navbar ---
 const Navbar = () => (
   <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
     <div className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -76,50 +76,41 @@ const Navbar = () => (
         </div>
         <span className="text-2xl font-bold text-gray-900 tracking-tight">TechPulse</span>
       </div>
-      <div className="hidden md:flex gap-6 text-sm font-semibold text-gray-500">
-        <span className="hover:text-indigo-600 cursor-pointer">Newsletter</span>
-        <span className="hover:text-indigo-600 cursor-pointer">Podcasts</span>
-        <span className="hover:text-indigo-600 cursor-pointer">About</span>
-        <button className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">Subscribe</button>
-      </div>
     </div>
   </nav>
 );
 
-// --- 3. Main Blog Page ---
+// --- Blog Page ---
 const BlogHome = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  // Unique categories nikalne ka logic
   const categories = ["All", ...new Set(ARTICLES.map(a => a.category))];
 
-  // Filter Logic: Agar 'All' hai to sab dikhao, nahi to match karo
-  const filteredArticles = selectedCategory === "All" 
-    ? ARTICLES 
-    : ARTICLES.filter(article => article.category === selectedCategory);
+  const filteredArticles =
+    selectedCategory === "All"
+      ? ARTICLES
+      : ARTICLES.filter(article => article.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans pb-20">
+    <div className="min-h-screen bg-gray-50 pb-20">
       
-      {/* Hero Section */}
       <div className="bg-indigo-900 text-white py-20 px-6 text-center">
         <h1 className="text-5xl font-extrabold mb-4">Insights for Developers.</h1>
         <p className="text-indigo-200 text-lg max-w-2xl mx-auto">
-          Stay ahead of the curve with deep dives into AI, Web Development, and Software Engineering.
+          Stay ahead with deep dives into AI and Web Development.
         </p>
       </div>
 
-      {/* Category Filter Bar */}
       <div className="container mx-auto px-6 -mt-8">
-        <div className="bg-white p-4 rounded-xl shadow-lg border border-gray-100 flex flex-wrap gap-3 justify-center">
+        <div className="bg-white p-4 rounded-xl shadow-lg border flex flex-wrap gap-3 justify-center">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
-                selectedCategory === cat 
-                  ? "bg-indigo-600 text-white shadow-md transform scale-105" 
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              className={`px-6 py-2 rounded-full text-sm font-bold transition ${
+                selectedCategory === cat
+                  ? "bg-indigo-600 text-white"
+                  : "bg-gray-100 text-gray-600"
               }`}
             >
               {cat}
@@ -128,54 +119,52 @@ const BlogHome = () => {
         </div>
       </div>
 
-      {/* Articles Grid */}
       <div className="container mx-auto px-6 mt-12">
-        <div className="flex justify-between items-end mb-8 border-b border-gray-200 pb-4">
-          <h2 className="text-3xl font-bold text-gray-800 flex items-center gap-2">
-            <BookOpen className="text-indigo-600" /> 
+        <div className="flex justify-between items-end mb-8 border-b pb-4">
+          <h2 className="text-3xl font-bold flex items-center gap-2">
+            <BookOpen className="text-indigo-600" />
             {selectedCategory === "All" ? "Latest Stories" : `${selectedCategory} Stories`}
           </h2>
-          <span className="text-gray-500 font-medium">{filteredArticles.length} Articles Found</span>
+          <span className="text-gray-500 font-medium">
+            {filteredArticles.length} Articles Found
+          </span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredArticles.map((article) => (
-            <div key={article.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 border border-gray-100 flex flex-col group">
-              
-              {/* Image Section */}
+            <div key={article.id} className="bg-white rounded-2xl overflow-hidden shadow-sm border flex flex-col group">
               <div className="h-56 overflow-hidden relative">
-                <img 
-                  src={article.img} 
-                  alt={article.title} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700" 
+                <img
+                  src={article.img}
+                  alt={article.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                 />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-indigo-800 flex items-center gap-1 shadow-sm">
+                <div className="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-sm">
                   <Hash size={12} /> {article.category}
                 </div>
               </div>
 
-              {/* Content Section */}
               <div className="p-6 flex-1 flex flex-col">
                 <div className="flex items-center gap-2 text-xs text-gray-500 mb-3">
                   <Calendar size={14} /> {article.date} • <Clock size={14} /> {article.readTime}
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-indigo-600 transition">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-indigo-600 transition">
                   {article.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
+
+                <p className="text-gray-600 text-sm mb-6 flex-1">
                   {article.excerpt}
                 </p>
 
-                {/* Author & Button */}
-                <div className="flex items-center justify-between border-t border-gray-50 pt-4 mt-auto">
+                <div className="flex items-center justify-between border-t pt-4 mt-auto">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                    <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
                       <User size={16} />
                     </div>
-                    <span className="text-sm font-semibold text-gray-700">{article.author}</span>
+                    <span className="text-sm font-semibold">{article.author}</span>
                   </div>
-                  <button className="text-indigo-600 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                  <button className="text-indigo-600 font-bold text-sm flex items-center gap-1">
                     Read More <ArrowRight size={16} />
                   </button>
                 </div>
@@ -188,7 +177,7 @@ const BlogHome = () => {
   );
 };
 
-// --- 4. Main App ---
+// --- App ---
 export default function App() {
   return (
     <Router>

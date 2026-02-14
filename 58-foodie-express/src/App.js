@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
-import { Search, ShoppingBag, Star, Clock, MapPin, Plus, Minus, ChevronRight, CheckCircle, Utensils } from 'lucide-react';
+import { Search, ShoppingBag, Star, Clock, MapPin, Plus, Minus, CheckCircle, Utensils } from 'lucide-react';
 
 // --- 1. Complex Data Structure ---
 const RESTAURANTS = [
@@ -256,6 +256,7 @@ const Cart = ({ cart, updateQty, total }) => {
 
 // --- 6. Order Success Page ---
 const Success = ({ clearCart }) => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useEffect(() => { clearCart(); }, []);
   
   return (
@@ -290,7 +291,7 @@ export default function App() {
     setCart(prev => prev.map(item => {
       if (item.id === id) return { ...item, qty: Math.max(0, item.qty + delta) };
       return item;
-    }).filter(item => item.qty > 0)); // 0 hone par remove
+    }).filter(item => item.qty > 0)); // Remove if 0
   };
 
   const total = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);

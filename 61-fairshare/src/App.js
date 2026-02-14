@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Users, Receipt, ArrowRight, Plus, Trash2, RotateCcw, CheckCircle, Wallet } from 'lucide-react';
+import { Users, ArrowRight, Plus, Trash2, RotateCcw, CheckCircle, Wallet } from 'lucide-react';
 
 // --- Components for Each Step ---
 

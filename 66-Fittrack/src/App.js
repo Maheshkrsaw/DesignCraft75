@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
-import { Activity, Dumbbell, Calendar, User, Timer, Play, CheckCircle, Flame, ChevronRight, BarChart2, ArrowLeft } from 'lucide-react';
+import { Activity, Dumbbell, Calendar, Timer, CheckCircle, Flame, ChevronRight, BarChart2, ArrowLeft } from 'lucide-react';
 
 // --- 1. Data (Workouts) ---
 const WORKOUTS = [
@@ -63,9 +63,8 @@ const Sidebar = () => (
   </div>
 );
 
-// Page 1: Dashboard
 const Dashboard = () => (
-  <div className="p-8 text-white">
+  <div className="p-8 text-white text-left">
     <h1 className="text-3xl font-bold mb-2">Welcome Back, Mahesh</h1>
     <p className="text-gray-400 mb-8">Let's crush your goals today!</p>
 
@@ -76,22 +75,22 @@ const Dashboard = () => (
           <span className="text-green-500 font-bold">+12%</span>
         </div>
         <h3 className="text-3xl font-black">2,450</h3>
-        <p className="text-gray-400">Calories Burned</p>
+        <p className="text-gray-400 text-sm">Calories Burned</p>
       </div>
       <div className="bg-gray-900 p-6 rounded-2xl border border-gray-800">
         <div className="p-3 bg-blue-500/20 text-blue-400 rounded-xl w-fit mb-4"><Timer /></div>
         <h3 className="text-3xl font-black">450 min</h3>
-        <p className="text-gray-400">Training Time</p>
+        <p className="text-gray-400 text-sm">Training Time</p>
       </div>
       <div className="bg-gray-900 p-6 rounded-2xl border border-gray-800">
         <div className="p-3 bg-purple-500/20 text-purple-400 rounded-xl w-fit mb-4"><Dumbbell /></div>
         <h3 className="text-3xl font-black">12</h3>
-        <p className="text-gray-400">Workouts Completed</p>
+        <p className="text-gray-400 text-sm">Workouts Completed</p>
       </div>
     </div>
 
     <h2 className="text-xl font-bold mb-4">Recommended for You</h2>
-    <div className="bg-gradient-to-r from-lime-600 to-green-600 rounded-2xl p-8 flex justify-between items-center shadow-lg shadow-lime-900/20 relative overflow-hidden">
+    <div className="bg-gradient-to-r from-lime-600 to-green-600 rounded-2xl p-8 flex justify-between items-center shadow-lg relative overflow-hidden">
       <div className="relative z-10">
         <h3 className="text-2xl font-black mb-2">Full Body Crush</h3>
         <p className="mb-6 opacity-90">45 Min • Intermediate • 320 Kcal</p>
@@ -102,15 +101,14 @@ const Dashboard = () => (
   </div>
 );
 
-// Page 2: Explore Workouts
 const Explore = () => (
-  <div className="p-8 text-white">
+  <div className="p-8 text-white text-left">
     <h2 className="text-3xl font-bold mb-8">Explore Workouts</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {WORKOUTS.map(workout => (
         <div key={workout.id} className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-lime-400 transition group">
           <div className="h-48 overflow-hidden relative">
-            <img src={workout.img} alt="cover" className="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60 group-hover:opacity-100" />
+            <img src={workout.img} alt="cover" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-500" />
             <span className="absolute top-4 right-4 bg-black/80 text-white text-xs font-bold px-3 py-1 rounded-full">{workout.level}</span>
           </div>
           <div className="p-6">
@@ -129,31 +127,23 @@ const Explore = () => (
   </div>
 );
 
-// Page 3: Active Workout (Complex Logic)
 const ActiveSession = ({ onFinish }) => {
   const navigate = useNavigate();
-  // In a real app, use useParams to fetch ID
   const workout = WORKOUTS[0]; 
-  
   const [currentEx, setCurrentEx] = useState(0);
   const [isResting, setIsResting] = useState(false);
   const [timer, setTimer] = useState(30);
 
-  // Timer Logic
   useEffect(() => {
     let interval;
     if (isResting && timer > 0) {
       interval = setInterval(() => setTimer(t => t - 1), 1000);
     } else if (timer === 0) {
-      setIsResting(false); // Rest Over
-      setTimer(30); // Reset for next time
+      setIsResting(false);
+      setTimer(30);
     }
     return () => clearInterval(interval);
   }, [isResting, timer]);
-
-  const handleNextSet = () => {
-    setIsResting(true); // Trigger Rest
-  };
 
   const handleNextExercise = () => {
     if (currentEx < workout.exercises.length - 1) {
@@ -161,7 +151,6 @@ const ActiveSession = ({ onFinish }) => {
       setIsResting(false);
       setTimer(30);
     } else {
-      // Finish Workout
       if(window.confirm("Finish Workout?")) {
         onFinish({ ...workout, date: new Date().toLocaleDateString() });
         navigate('/history');
@@ -170,14 +159,14 @@ const ActiveSession = ({ onFinish }) => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white p-6 md:p-10 flex flex-col">
-      <div className="flex justify-between items-center mb-10">
+    <div className="min-h-screen bg-black text-white p-6 md:p-10 flex flex-col items-center">
+      <div className="w-full flex justify-between items-center mb-10 max-w-4xl">
         <button onClick={() => navigate(-1)} className="text-gray-400 hover:text-white"><ArrowLeft /></button>
         <h2 className="text-xl font-bold">{workout.title}</h2>
         <div className="w-8"></div>
       </div>
 
-      <div className="flex-1 flex flex-col items-center justify-center text-center max-w-lg mx-auto w-full">
+      <div className="flex-1 flex flex-col items-center justify-center text-center max-w-lg w-full">
         {isResting ? (
           <div className="animate-in zoom-in">
             <h1 className="text-6xl font-black text-lime-400 mb-4">{timer}s</h1>
@@ -189,23 +178,19 @@ const ActiveSession = ({ onFinish }) => {
           <div className="w-full">
             <p className="text-lime-400 font-bold mb-2">Exercise {currentEx + 1}/{workout.exercises.length}</p>
             <h1 className="text-4xl md:text-5xl font-black mb-6">{workout.exercises[currentEx].name}</h1>
-            
             <div className="grid grid-cols-2 gap-4 mb-10">
               <div className="bg-gray-900 p-6 rounded-2xl">
-                <p className="text-gray-400 text-sm uppercase font-bold">Sets</p>
+                <p className="text-gray-400 text-xs font-bold uppercase">Sets</p>
                 <p className="text-3xl font-bold">{workout.exercises[currentEx].sets}</p>
               </div>
               <div className="bg-gray-900 p-6 rounded-2xl">
-                <p className="text-gray-400 text-sm uppercase font-bold">Reps</p>
+                <p className="text-gray-400 text-xs font-bold uppercase">Reps</p>
                 <p className="text-3xl font-bold">{workout.exercises[currentEx].reps}</p>
               </div>
             </div>
-
-            <button onClick={handleNextSet} className="w-full bg-lime-500 text-black py-5 rounded-2xl font-black text-xl hover:bg-lime-400 transition mb-4 shadow-lg shadow-lime-900/50">
-              LOG SET
-            </button>
-            <button onClick={handleNextExercise} className="text-gray-500 font-bold hover:text-white transition">
-              Next Exercise <ChevronRight size={16} className="inline"/>
+            <button onClick={() => setIsResting(true)} className="w-full bg-lime-500 text-black py-5 rounded-2xl font-black text-xl mb-4">LOG SET</button>
+            <button onClick={handleNextExercise} className="text-gray-500 font-bold hover:text-white flex items-center gap-2 mx-auto">
+              Next Exercise <ChevronRight size={16}/>
             </button>
           </div>
         )}
@@ -214,9 +199,8 @@ const ActiveSession = ({ onFinish }) => {
   );
 };
 
-// Page 4: Activity History
 const History = ({ logs }) => (
-  <div className="p-8 text-white">
+  <div className="p-8 text-white text-left">
     <h2 className="text-3xl font-bold mb-8">Workout History</h2>
     {logs.length === 0 ? (
       <p className="text-gray-500">No workouts completed yet.</p>
@@ -238,59 +222,46 @@ const History = ({ logs }) => (
   </div>
 );
 
-// Page 5: BMI Calculator
 const BmiCalc = () => {
   const [weight, setWeight] = useState(70);
   const [height, setHeight] = useState(175);
   const bmi = (weight / ((height/100) ** 2)).toFixed(1);
 
-  let status = "Normal";
-  let color = "text-green-500";
-  if (bmi < 18.5) { status = "Underweight"; color = "text-yellow-500"; }
-  else if (bmi >= 25) { status = "Overweight"; color = "text-red-500"; }
-
   return (
     <div className="p-8 text-white flex justify-center">
       <div className="bg-gray-900 p-8 rounded-3xl border border-gray-800 w-full max-w-md text-center">
         <h2 className="text-2xl font-bold mb-6">BMI Calculator</h2>
-        
-        <div className="mb-6">
+        <div className="mb-6 text-left">
           <label className="block text-gray-400 text-sm font-bold mb-2">Weight: {weight} kg</label>
           <input type="range" min="40" max="150" value={weight} onChange={(e) => setWeight(e.target.value)} className="w-full accent-lime-500"/>
         </div>
-
-        <div className="mb-8">
+        <div className="mb-8 text-left">
           <label className="block text-gray-400 text-sm font-bold mb-2">Height: {height} cm</label>
           <input type="range" min="140" max="220" value={height} onChange={(e) => setHeight(e.target.value)} className="w-full accent-lime-500"/>
         </div>
-
-        <div className="bg-black p-6 rounded-2xl mb-4">
-          <p className="text-gray-500 text-sm uppercase font-bold">Your BMI</p>
-          <h1 className="text-6xl font-black text-white my-2">{bmi}</h1>
-          <p className={`text-xl font-bold ${color}`}>{status}</p>
+        <div className="bg-black p-6 rounded-2xl">
+          <p className="text-gray-500 text-xs font-bold uppercase">Your BMI</p>
+          <h1 className="text-6xl font-black my-2">{bmi}</h1>
+          <p className={`text-xl font-bold ${bmi >= 25 ? 'text-red-500' : 'text-green-500'}`}>
+            {bmi < 18.5 ? "Underweight" : bmi >= 25 ? "Overweight" : "Normal"}
+          </p>
         </div>
       </div>
     </div>
   );
 };
 
-// --- Main App ---
 export default function App() {
   const [history, setHistory] = useState([]);
-
-  const addLog = (log) => {
-    setHistory([log, ...history]);
-  };
-
   return (
     <Router>
-      <div className="flex min-h-screen bg-black font-sans selection:bg-lime-500 selection:text-black">
+      <div className="flex min-h-screen bg-black font-sans">
         <Sidebar />
         <div className="flex-1 md:ml-64">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/explore" element={<Explore />} />
-            <Route path="/active/:id" element={<ActiveSession onFinish={addLog} />} />
+            <Route path="/active/:id" element={<ActiveSession onFinish={(log) => setHistory([log, ...history])} />} />
             <Route path="/history" element={<History logs={history} />} />
             <Route path="/bmi" element={<BmiCalc />} />
           </Routes>
@@ -298,4 +269,4 @@ export default function App() {
       </div>
     </Router>
   );
-}
+}  

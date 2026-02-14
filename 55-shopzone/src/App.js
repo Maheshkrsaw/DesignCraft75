@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useCallback } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { ShoppingBag, Trash2, Plus, Minus, ArrowRight, CheckCircle } from 'lucide-react';
 
 // --- Dummy Products Data ---
@@ -12,7 +12,7 @@ const PRODUCTS = [
   { id: 6, name: "Polaroid Camera", price: 6500, img: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80", category: "Camera" },
 ];
 
-// --- Navbar Component ---
+// --- Navbar ---
 const Navbar = ({ cartCount }) => (
   <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
     <div className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -29,7 +29,7 @@ const Navbar = ({ cartCount }) => (
   </nav>
 );
 
-// --- Page 1: Shop (Product List) ---
+// --- Shop Page ---
 const Shop = ({ addToCart }) => (
   <div className="bg-gray-50 min-h-screen py-10 px-6">
     <div className="container mx-auto">
@@ -58,9 +58,8 @@ const Shop = ({ addToCart }) => (
   </div>
 );
 
-// --- Page 2: Cart Page ---
+// --- Cart Page ---
 const Cart = ({ cart, updateQuantity, removeFromCart }) => {
-  // Logic: Reduce function to calculate total
   const total = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
 
   if (cart.length === 0) return (
@@ -77,7 +76,6 @@ const Cart = ({ cart, updateQuantity, removeFromCart }) => {
         <h2 className="text-3xl font-bold mb-8">Shopping Cart ({cart.length})</h2>
         <div className="flex flex-col md:flex-row gap-8">
           
-          {/* Cart Items List */}
           <div className="flex-1 space-y-4">
             {cart.map((item) => (
               <div key={item.id} className="bg-white p-4 rounded-xl shadow-sm flex gap-4 items-center">
@@ -87,7 +85,6 @@ const Cart = ({ cart, updateQuantity, removeFromCart }) => {
                   <p className="text-gray-500">₹{item.price.toLocaleString()}</p>
                 </div>
                 
-                {/* Quantity Controls */}
                 <div className="flex items-center gap-3 bg-gray-100 rounded-lg p-1">
                   <button onClick={() => updateQuantity(item.id, -1)} className="p-1 hover:bg-white rounded-md transition"><Minus size={16} /></button>
                   <span className="font-bold w-4 text-center">{item.qty}</span>
@@ -101,7 +98,6 @@ const Cart = ({ cart, updateQuantity, removeFromCart }) => {
             ))}
           </div>
 
-          {/* Checkout Summary */}
           <div className="md:w-80 h-fit bg-white p-6 rounded-2xl shadow-sm border border-gray-100 sticky top-24">
             <h3 className="text-lg font-bold mb-4">Order Summary</h3>
             <div className="flex justify-between mb-2 text-gray-500">
@@ -126,11 +122,11 @@ const Cart = ({ cart, updateQuantity, removeFromCart }) => {
   );
 };
 
-// --- Page 3: Checkout Success ---
+// --- Checkout Page ---
 const Checkout = ({ clearCart }) => {
   useEffect(() => {
-    clearCart(); // Page load hote hi cart empty kar do
-  }, []);
+    clearCart();
+  }, [clearCart]);
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6 text-center">
@@ -148,11 +144,10 @@ const Checkout = ({ clearCart }) => {
   );
 };
 
-// --- Main App Logic (The Brain) ---
+// --- Main App ---
 export default function App() {
   const [cart, setCart] = useState([]);
 
-  // Logic: Agar item pehle se hai to qty badhao, nahi to naya add karo
   const addToCart = (product) => {
     setCart((prevCart) => {
       const existing = prevCart.find(item => item.id === product.id);
@@ -165,21 +160,23 @@ export default function App() {
     });
   };
 
-  // Logic: Quantity update karna (0 hone par remove nahi karna, user khud remove karega)
   const updateQuantity = (id, delta) => {
-    setCart(prevCart => prevCart.map(item => {
-      if (item.id === id) {
-        return { ...item, qty: Math.max(1, item.qty + delta) }; // Min qty 1 rahegi
-      }
-      return item;
-    }));
+    setCart(prevCart =>
+      prevCart.map(item =>
+        item.id === id
+          ? { ...item, qty: Math.max(1, item.qty + delta) }
+          : item
+      )
+    );
   };
 
   const removeFromCart = (id) => {
     setCart(prevCart => prevCart.filter(item => item.id !== id));
   };
 
-  const clearCart = () => setCart([]);
+  const clearCart = useCallback(() => {
+    setCart([]);
+  }, []);
 
   return (
     <Router>
@@ -188,7 +185,11 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Shop addToCart={addToCart} />} />
           <Route path="/cart" element={
-            <Cart cart={cart} updateQuantity={updateQuantity} removeFromCart={removeFromCart} />
+            <Cart 
+              cart={cart}
+              updateQuantity={updateQuantity}
+              removeFromCart={removeFromCart}
+            />
           } />
           <Route path="/checkout" element={<Checkout clearCart={clearCart} />} />
         </Routes>
