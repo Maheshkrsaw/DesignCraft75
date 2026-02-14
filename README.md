@@ -682,17 +682,6 @@ From productivity tools to e-commerce and media apps, these 20 days strengthened
 
 ---
 
-### 🌐 Connect With Me  
-🐦 **Twitter/X:** https://x.com/kumarMahesh9304  
-💻 **GitHub:** https://github.com/Maheshkrsaw  
-📂 **DesignCraft75 Repo:** https://github.com/Maheshkrsaw/DesignCraft75  
-📘 **FullStack75 Repo:** https://github.com/Maheshkrsaw/75DaysOfFullStack  
-🎯 **DSA75 Repo:** https://github.com/Maheshkrsaw/75-Days-of-DSA-Grind  
-
----
-
-> _“Consistent creation turns skills into an unstoppable growth engine — one project at a time.”_ 🚀
----
 
 
 ### 🔗 Connect With Me 🌐  
