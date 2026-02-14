@@ -449,6 +449,251 @@ These 19 days were focused on **logic building, API integration, and advanced fr
 
 > _“Every single project is a brick. I’m building my empire — one day at a time.”_ 🚀
 
+---
+# 🎨 #DesignCraft75 — Days 51 to 70 🚀  
+This phase is all about **real-world projects, product-style apps, and interactive web experiences**.  
+From productivity tools to e-commerce and media apps, these 20 days strengthened my **full-stack confidence, UI/UX design, and coding consistency**. 💻✨  
+
+---
+
+## 🧩 Day 51 — CineVerse  
+🔗 **Live:** [CineVerse](https://51-cineverse.netlify.app/)  
+- Built a **movie discovery app**  
+- Focused on **poster grid layout & interactive UI**  
+- Practiced API integration and responsive design  
+
+---
+
+## 🧩 Day 52 — FinSmart  
+🔗 **Live:** [FinSmart](https://52-finsmart.netlify.app/)  
+- Created a **finance management tool**  
+- Implemented **charts & expense visualization**  
+- Practiced clean UI and interactive components  
+
+---
+
+## 🧩 Day 53 — Focus – Todo  
+🔗 **Live:** [Focus – Todo](https://53-focus-to-do.netlify.app/)  
+- Built a **task management todo app**  
+- Added **add/edit/delete & localStorage persistence**  
+- Focused on **minimalist and functional design**  
+
+---
+
+## 🧩 Day 54 — Nexus  
+🔗 **Live:** [Nexus](https://54-nexus-agency.netlify.app/)  
+- Designed a **creative agency landing page**  
+- Practiced **responsive hero & card sections**  
+- Focused on clean typography & visual hierarchy  
+
+---
+
+## 🧩 Day 55 — Shopzone  
+🔗 **Live:** [Shopzone](https://55-shopzone.netlify.app/)  
+- Built a **modern e-commerce landing page**  
+- Focused on **product cards, hover animations & layout**  
+- Practiced **UI consistency & responsive design**  
+
+---
+
+## 🧩 Day 56 — Techpluse  
+🔗 **Live:** [Techpluse](https://56-techpulse.netlify.app/)  
+- Built a **tech product showcase page**  
+- Added interactive **carousel & pricing cards**  
+- Strengthened **UI/UX design principles**  
+
+---
+
+## 🧩 Day 57 — Taskmaster  
+🔗 **Live:** [Taskmaster](https://57-taskmaster.netlify.app/)  
+- Created a **Trello-style project management app**  
+- Practiced **drag-and-drop & state management**  
+- Focused on **clean interface and workflow design**  
+
+---
+
+## 🧩 Day 58 — Foodie  
+🔗 **Live:** [Foodie](https://58-foodie-express.netlify.app/)  
+- Designed a **restaurant/food landing page**  
+- Practiced **menu cards, hero sections & CTAs**  
+- Focused on **vibrant visuals & responsive layout**  
+
+---
+
+## 🧩 Day 59 — Dreamnest  
+🔗 **Live:** [Dreamnest](https://59-dreamnest.netlify.app/)  
+- Built a **real estate property showcase**  
+- Practiced **grid & flexbox for listings**  
+- Focused on **clean typography & image display**  
+
+---
+
+## 🧩 Day 60 — Vibesnap  
+🔗 **Live:** [Vibesnap](https://60-vibesnap.netlify.app/)  
+- Designed a **social media/photo sharing interface**  
+- Practiced **cards & hover effects**  
+- Focused on **modern UI and responsiveness**  
+
+---
+
+## 🧩 Day 61 — Fairshare  
+🔗 **Live:** [Fairshare](https://61-fairshare.netlify.app/)  
+- Built a **community/transaction sharing platform**  
+- Focused on **responsive cards & interactive UI**  
+- Practiced **user-friendly interface design**  
+
+---
+
+## 🧩 Day 62 — Quizman  
+🔗 **Live:** [Quizman](https://62-quizmaster.netlify.app/)  
+- Created a **quiz web app**  
+- Implemented **question navigation & score tracking**  
+- Practiced **JS logic & DOM updates**  
+
+---
+
+## 🧩 Day 63 — Medicare  
+🔗 **Live:** [Medicare](https://63-medicare.netlify.app/)  
+- Designed a **healthcare landing page**  
+- Focused on **clean UI & responsive design**  
+- Practiced **hero sections & card components**  
+
+---
+
+## 🧩 Day 64 — Carrercraft  
+🔗 **Live:** [Carrercraft](https://64-careercraft.netlify.app/)  
+- Built a **career guidance and project showcase page**  
+- Practiced **card layouts & responsive typography**  
+- Focused on **clean, professional UI**  
+
+---
+
+## 🧩 Day 65 — Pennywise  
+🔗 **Live:** [Pennywise](https://65-pennywise.netlify.app/)  
+- Created a **finance/expense dashboard UI**  
+- Practiced **charts, tables & responsive layout**  
+- Focused on **modern dashboard aesthetics**  
+
+---
+
+## 🧩 Day 66 — Fittrack  
+🔗 **Live:** [Fittrack](https://66-fittrack.netlify.app/)  
+- Built a **fitness tracking dashboard**  
+- Focused on **activity cards & health metrics**  
+- Practiced **modern UI + responsive design**  
+
+---
+
+## 🧩 Day 67 — Jobhunt  
+🔗 **Live:** [Jobhunt](https://67-jobhunt.netlify.app/)  
+- Designed a **job portal landing page**  
+- Added **job cards, filters & hero sections**  
+- Focused on **clear typography & spacing**  
+
+---
+
+## 🧩 Day 68 — Melody  
+🔗 **Live:** [Melody](https://68-melodystream.netlify.app/)  
+- Built a **music streaming homepage**  
+- Practiced **album cards, sliders & responsive layout**  
+- Focused on **interactive media UI**  
+
+---
+
+## 🧩 Day 69 — Edumaster  
+🔗 **Live:** [Edumaster](https://69-edumaster.netlify.app/)  
+- Designed an **e-learning/course selling platform**  
+- Practiced **cards, pricing & responsive hero sections**  
+- Focused on **UX clarity & layout balance**  
+
+---
+
+## 🧩 Day 70 — Wanderlust  
+🔗 **Live:** [Wanderlust](https://70-wanderlust.netlify.app/)  
+- Built a **travel-themed landing page**  
+- Practiced **image grids & hover effects**  
+- Focused on **clean, aesthetic layout for tourism UI**  
+
+---
+# 🎨 #DesignCraft75 — Days 51 to 70 🚀  
+This phase is all about **real-world projects, product-style apps, and interactive web experiences**.  
+From productivity tools to e-commerce and media apps, these 20 days strengthened my **full-stack confidence, UI/UX design, and coding consistency**. 💻✨  
+
+---
+
+## 🧩 Projects Summary (Days 51–70)
+
+| Day | Project Name        | Live Link |
+|-----|-------------------|-----------|
+| 51  | CineVerse          | [Link](https://51-cineverse.netlify.app/) |
+| 52  | FinSmart           | [Link](https://52-finsmart.netlify.app/) |
+| 53  | Focus – Todo       | [Link](https://53-focus-to-do.netlify.app/) |
+| 54  | Nexus              | [Link](https://54-nexus-agency.netlify.app/) |
+| 55  | Shopzone           | [Link](https://55-shopzone.netlify.app/) |
+| 56  | Techpluse          | [Link](https://56-techpulse.netlify.app/) |
+| 57  | Taskmaster         | [Link](https://57-taskmaster.netlify.app/) |
+| 58  | Foodie             | [Link](https://58-foodie-express.netlify.app/) |
+| 59  | Dreamnest          | [Link](https://59-dreamnest.netlify.app/) |
+| 60  | Vibesnap           | [Link](https://60-vibesnap.netlify.app/) |
+| 61  | Fairshare          | [Link](https://61-fairshare.netlify.app/) |
+| 62  | Quizman            | [Link](https://62-quizmaster.netlify.app/) |
+| 63  | Medicare           | [Link](https://63-medicare.netlify.app/) |
+| 64  | Carrercraft        | [Link](https://64-careercraft.netlify.app/) |
+| 65  | Pennywise          | [Link](https://65-pennywise.netlify.app/) |
+| 66  | Fittrack           | [Link](https://66-fittrack.netlify.app/) |
+| 67  | Jobhunt            | [Link](https://67-jobhunt.netlify.app/) |
+| 68  | Melody             | [Link](https://68-melodystream.netlify.app/) |
+| 69  | Edumaster          | [Link](https://69-edumaster.netlify.app/) |
+| 70  | Wanderlust         | [Link](https://70-wanderlust.netlify.app/) |
+
+---
+
+## 🪞 Reflection (Days 51–70)  
+> “These 20 days cemented product thinking and advanced UI/UX practices.”  
+
+### Key Learnings  
+- Strengthened **full-stack mindset with real-world apps**  
+- Mastered **interactive dashboards, media layouts, and landing pages**  
+- Improved **responsive design, card layouts, and modern UI patterns**  
+- Built **consistent portfolio-ready projects**  
+
+---
+
+### 🌐 Connect With Me  
+🐦 **Twitter/X:** https://x.com/kumarMahesh9304  
+💻 **GitHub:** https://github.com/Maheshkrsaw  
+📂 **DesignCraft75 Repo:** https://github.com/Maheshkrsaw/DesignCraft75  
+📘 **FullStack75 Repo:** https://github.com/Maheshkrsaw/75DaysOfFullStack  
+🎯 **DSA75 Repo:** https://github.com/Maheshkrsaw/75-Days-of-DSA-Grind  
+
+---
+
+> _“Consistent creation turns skills into an unstoppable growth engine — one project at a time.”_ 🚀
+
+
+## 🪞 Reflection (Days 51–70)  
+> “These 20 days cemented product thinking and advanced UI/UX practices.”  
+
+### Key Learnings  
+- Strengthened **full-stack mindset with real-world apps**  
+- Mastered **interactive dashboards, media layouts, and landing pages**  
+- Improved **responsive design, card layouts, and modern UI patterns**  
+- Built **consistent portfolio-ready projects**  
+
+---
+
+### 🌐 Connect With Me  
+🐦 **Twitter/X:** https://x.com/kumarMahesh9304  
+💻 **GitHub:** https://github.com/Maheshkrsaw  
+📂 **DesignCraft75 Repo:** https://github.com/Maheshkrsaw/DesignCraft75  
+📘 **FullStack75 Repo:** https://github.com/Maheshkrsaw/75DaysOfFullStack  
+🎯 **DSA75 Repo:** https://github.com/Maheshkrsaw/75-Days-of-DSA-Grind  
+
+---
+
+> _“Consistent creation turns skills into an unstoppable growth engine — one project at a time.”_ 🚀
+---
+
 
 ### 🔗 Connect With Me 🌐  
 🐦 **Twitter/X:** [@kumarMahesh9304](https://x.com/kumarMahesh9304)  
